@@ -1,0 +1,64 @@
+$block: appInfoSub;
+
+.#{$block} {
+    display: flex;
+    order: 1;
+    background-color: #F2F2F7;
+    border-bottom: 1px solid #BDBDC3;
+    padding: perCalc(12, 375) perCalc(15, 375) perCalc(12, 375)
+    perCalc(20, 375);
+
+
+
+    &__infoText {
+        order: 2;
+        margin-left: perCalc(10, 375);
+    }
+
+
+    
+    &__name {
+        font-size: fsVw($fsDFS);
+        margin: 3px 0 10px;
+    }
+
+
+
+    &__icon {
+        width: perCalc(60, 375);
+        height: perCalc(60, 375);
+        order: 1;
+
+
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+
+    &__sub {
+        font-size: fsVw($fs1SS);
+        color: $fc01;
+        margin-bottom: 5px;
+    }
+
+
+
+    &__store {
+        font-size: fsVw($fs1SS);
+        color: $fc01;
+    }
+
+
+
+    &__dl {
+        font-size: fsVw($fsDF);
+        text-decoration: none;
+        color: $fsLink;
+        order: 3;
+        align-self: center;
+        margin-left: auto;
+    }
+}

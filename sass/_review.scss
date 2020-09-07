@@ -1,0 +1,60 @@
+$block: review;
+
+.#{$block} {
+    border-top: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+    padding: 15px 0 20px;
+    margin-bottom: perCalc(50, 345);
+
+
+
+    &__header {
+        font-size: fsVw($fsDF);
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+
+
+    &__itemList {
+        background-color: #F2F2F6;
+        padding: perCalc(12, 345);
+    }
+
+
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: fsVw($fs1S);
+    }
+
+
+
+    &__itemHeader {
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 6px;
+    }
+
+
+
+    &__date {
+        color: #85858A;
+        margin-bottom: 6px;
+    }
+
+
+
+    &__user {
+        color: #85858A;
+    }
+
+
+
+    &__desc {
+        margin-top: 15px;
+    }
+}

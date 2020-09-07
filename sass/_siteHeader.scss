@@ -1,0 +1,27 @@
+$block: siteHeader;
+
+.#{$block} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    
+    &__siteTitle {
+        font-family: kozuka-gothic-pro,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: fsVw($fsDFL);
+    }
+
+
+
+    &__r18 {
+        width: perCalc(36, 375);
+
+        
+
+        img {
+            width: 100%;
+        }
+    }
+}

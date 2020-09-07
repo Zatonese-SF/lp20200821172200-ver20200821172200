@@ -1,0 +1,27 @@
+// ▼ Calc ▼
+
+    @function perCalc($size, $stdSize) {
+        @return ($size / $stdSize * 100) * 1%;
+    }
+
+    @function vwCalc($size, $viewport: $vpW-std) {
+        $rate: 100 / $viewport;
+        @return $rate * $size * 1vw;
+    }
+
+// ▲ Calc ▲
+
+
+
+// ▼ Font Size ▼
+
+    @function fsRem($size) {
+        @return $size / 10 + rem;
+    }
+
+    @function fsVw($size, $viewport: $vpW-std) {
+        $rate: 100 / $viewport;
+        @return $rate * $size * 1vw;
+    }
+
+// ▲ Font Size ▲

@@ -1,0 +1,39 @@
+// ▼ Media Queries ▼
+
+    $mq-points: (
+        maxW320: (max-width: 320px),
+        maxW350: (max-width: 350px),
+        maxW374: (max-width: 374px),
+        minW1000: (min-width: 1000px),
+        minW1025: (min-width: 1025px),
+        minH750: (min-height: 750px),
+        minH760: (min-height: 760px),
+        minW375-max400: "(min-width: 375px) and (max-width: 400px)",
+        minH800: (min-height: 800px), 
+    ) !default;
+
+    @mixin mq($key) {
+        @media #{map-get($mq-points,$key)} {
+            @content;
+        }
+    }
+    // @include mq() {}
+
+// ▲ Media Queries ▲
+
+
+
+// ▼ Clearfix ▼
+
+    @mixin clearfix {
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+            height:0;
+        }
+    }
+    // @include clearfix;
+
+// ▲ Clearfix ▲

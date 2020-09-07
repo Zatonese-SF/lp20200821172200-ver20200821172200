@@ -1,0 +1,433 @@
+// ▼ Text ▼
+
+    @mixin fs ($fs:$fsDF, $unit:vw) {
+
+        @if $unit == rem {
+            font-size: fsRem($fs);
+        }
+        @else if $unit == vw {
+            font-size: fsRem($fs);
+            font-size: fsVw($fs);
+        }
+    }
+
+
+
+    @mixin txDF($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-DF);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-DF);
+            font-size: fsVw($fs-DF);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin txDFL($fsUnit:vw, $ls:$ls-DF, $lh:$lh-1S) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-DFL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-DFL);
+            font-size: fsVw($fs-DFL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx1L($fsUnit:vw, $ls:$ls-DF, $lh:$lh-2S) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-1L);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-1L);
+            font-size: fsVw($fs-1L);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx1LL($fsUnit:vw, $ls:$ls-DF, $lh:$lh-2S) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-1LL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-1LL);
+            font-size: fsVw($fs-1LL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx2L($fsUnit:vw, $ls:$ls-1S, $lh:$lh-1S) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-2L);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-2L);
+            font-size: fsVw($fs-2L);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx2LL($fsUnit:vw, $ls:$ls-1S, $lh:$lh-2S) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-2LL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-2LL);
+            font-size: fsVw($fs-2LL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx3L($fsUnit:vw, $ls:$ls-DF, $lh:$lh-2S) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-3L);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-3L);
+            font-size: fsVw($fs-3L);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx3LL($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-3LL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-3LL);
+            font-size: fsVw($fs-3LL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx4L($fsUnit:vw, $ls:$ls-DF, $lh:$lh-2S) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-4L);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-4L);
+            font-size: fsVw($fs-4L);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx4LL($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-4LL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-4LL);
+            font-size: fsVw($fs-4LL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx5L($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-5L);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-5L);
+            font-size: fsVw($fs-5L);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx5LL($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-5LL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-5LL);
+            font-size: fsVw($fs-5LL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx6L($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-6L);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-6L);
+            font-size: fsVw($fs-6L);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx6LL($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-6LL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-6LL);
+            font-size: fsVw($fs-6LL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx7L($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-7L);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-7L);
+            font-size: fsVw($fs-7L);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx7LL($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-7LL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-7LL);
+            font-size: fsVw($fs-7LL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx8L($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-8L);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-8L);
+            font-size: fsVw($fs-8L);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx8LL($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-8LL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-8LL);
+            font-size: fsVw($fs-8LL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx9L($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-9L);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-9L);
+            font-size: fsVw($fs-9L);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx9LL($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-9LL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-9LL);
+            font-size: fsVw($fs-9LL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx10L($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-10L);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-10L);
+            font-size: fsVw($fs-10L);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx10LL($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-10LL);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-10LL);
+            font-size: fsVw($fs-10LL);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin txDFS($fsUnit:vw, $ls:$ls-2S, $lh:$lh-2S) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-DFS);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-DFS);
+            font-size: fsVw($fs-DFS);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx1S($fsUnit:vw, $ls:$ls-1S, $lh:$lh-1S) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-1S);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-1S);
+            font-size: fsVw($fs-1S);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin tx1SS($fsUnit:vw, $ls:$ls-DF, $lh:$lh-DF) {
+
+        @if $fsUnit == rem {
+            font-size: fsRem($fs-1SS);
+        }
+        @else if $fsUnit == vw {
+            font-size: fsRem($fs-1SS);
+            font-size: fsVw($fs-1SS);
+        }
+
+        letter-spacing: $ls;
+        line-height: $lh;
+    }
+
+
+
+    @mixin txEP {
+        font-weight: bold;
+    }
+
+// ▲ Text ▲
+
+
+
+// ▼ Block Default ▼
+
+    @mixin block-df($fs:fsRem($fs-DF), $ls:$ls-DF, $lh:$lh-DF, $fc:$fc-DF) {
+        font-size: $fs;
+        letter-spacing: $ls;
+        line-height: $lh;
+        color: $fc;
+    }
+
+// ▲ Block Default ▲
