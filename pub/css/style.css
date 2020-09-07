@@ -342,13 +342,13 @@ body {
   color: #fff;
 }
 
-.tag {
+.tag__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.tag li {
+.tag__list li {
   font-size: 3.2vw;
   border: solid 1px #707070;
   padding: 7px;

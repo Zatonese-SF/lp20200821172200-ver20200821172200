@@ -1,13 +1,16 @@
 $block: tag;
 
 .#{$block} {
-    display: flex;
-    // flex-wrap: wrap;
     
-    li {
-        font-size: fsVw($fs1S);
-        border: solid 1px #707070;
-        padding: 7px;
-        margin-right: 5px;
+
+    &__list {
+        display: flex;
+
+        li {
+            font-size: fsVw($fs1S);
+            border: solid 1px #707070;
+            padding: 7px;
+            margin-right: 5px;
+        }
     }
 }

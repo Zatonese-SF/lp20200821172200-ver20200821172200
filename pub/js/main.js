@@ -11,20 +11,20 @@
         '05',
         '06',
         '07',
-        // '08',
-        // '09',
-        // '10',
-        // '11',
-        // '12',
-        // '13',
-        // '14',
-        // '15',
-        // '16',
-        // '17',
-        // '18',
-        // '19',
-        // '20',
-        // '21',
+        '08',
+        '09',
+        '10',
+        '11',
+        '12',
+        '13',
+        '14',
+        '15',
+        '16',
+        '17',
+        '18',
+        '19',
+        '20',
+        '21',
     ];
 
     function shuffle(arr) {
@@ -37,46 +37,27 @@
     }
 
     const shuffledChoices = shuffle([...tagName]);
-    
-    const tagList = document.querySelectorAll('.tagList');
-    console.log(tagList);
 
-    for(let i = 0; i <= 6; i++) {
-        const tagUl = document.querySelectorAll('.tagList > ul');
-        console.log(tagUl);
+    // console.log(shuffledChoices);
+
+    for(let i = 0; i <= 20; i++) {
         const tagItem = document.createElement('li');
+        tagItem.textContent = shuffledChoices[i];
 
-        tagUl.appendChild(tagItem);
-        tagUl.textContent = shuffledChoices[i];
+        if(i >= 0 && i <= 6) {
+            const tagList02 = document.getElementById('tagList01');
+            tagList02.appendChild(tagItem);
+        }
+
+        if(i >= 7 && i <= 13) {
+            const tagList02 = document.getElementById('tagList02');
+            tagList02.appendChild(tagItem);
+        }
+
+        if(i >= 14 && i <= 20) {
+            const tagList02 = document.getElementById('tagList03');
+            tagList02.appendChild(tagItem);
+        }
     }
-
-
-    
-    // tagList.forEach(() => {
-
-
-        
-
-    
-        
-
-        
-        
-
-    // });
-
-    
-
-
-
-
-    
-
-    // const br = document.createElement('br');
-    // const tagLi08 = document.querySelector('#tag li:nth-child(8)');
-
-    // console.log(tagLi08);
-
-    // tagUl.insertBefore(br, tagLi08);
 
 }
