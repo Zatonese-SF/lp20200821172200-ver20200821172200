@@ -342,17 +342,46 @@ body {
   color: #fff;
 }
 
+.tag {
+  white-space: nowrap;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-left: 4%;
+  margin-bottom: 20px;
+  padding-bottom: 1px;
+}
+
+.tag::-webkit-scrollbar {
+  display: none;
+}
+
+.tag__listWrap:nth-child(1), .tag__listWrap:nth-child(2) {
+  margin-bottom: 8px;
+}
+
 .tag__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.tag__list:last-child::after {
+  content: '';
+  display: block;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 8px;
+}
+
 .tag__list li {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   font-size: 3.2vw;
+  border-radius: 5px;
   border: solid 1px #707070;
   padding: 7px;
-  margin-right: 5px;
+  margin-right: 7px;
 }
 
 .appInfo {
