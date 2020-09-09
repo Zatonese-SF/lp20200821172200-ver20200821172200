@@ -2,6 +2,34 @@
 
 {
 
+    let mySwiper = new Swiper ('.swiper-container', {
+
+        spaceBetween: 8,
+        loop: true,  //ループ可能（ループモードを有効に）
+  
+
+ 
+        
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+    });
+
+
+
+
+    
     const tagName = [
 
         'あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお',

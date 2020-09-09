@@ -1,0 +1,40 @@
+$block: mainVisual;
+
+.#{$block} {
+    position: relative;
+    padding: 0 8px 15px;
+    margin-bottom: 20px;
+
+
+
+    li {
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+
+.swiper-pagination {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+	background: #9acd32; /* 色：緑 */
+    opacity: 0.5; /* 半透明（デフォルトでは0.2） */
+    margin-right: 7px;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+/* 現在のスライドのスタイル */
+.swiper-pagination-bullet-active {
+	background: #ffd700; /* 色：黄色 */
+	opacity: 1; /* 不透明 */
+}
