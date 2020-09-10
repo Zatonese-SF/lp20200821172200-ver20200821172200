@@ -2,29 +2,30 @@
 
 {
 
-    let mySwiper = new Swiper ('.swiper-container', {
+    // ▼ swiper ▼
 
-        spaceBetween: 8,
-        loop: true,  //ループ可能（ループモードを有効に）
-  
+        let mySwiper = new Swiper ('.swiper-container', {
 
- 
-        
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-        },
+            spaceBetween: 8,
+            loop: true,  //ループ可能（ループモードを有効に）
 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+    
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
 
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-          },
-    });
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+        });
+
+    // ▲ swiper ▲
 
 
 
@@ -87,5 +88,11 @@
             tagList02.appendChild(tagItem);
         }
     }
+
+
+
+
+
+        
 
 }

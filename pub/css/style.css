@@ -422,6 +422,28 @@ body {
   margin-right: 7px;
 }
 
+.visualContents {
+  padding: 0 8px;
+}
+
+.visualContents ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.visualContents li {
+  background: #ccc;
+  width: 49.02507%;
+  padding-top: 47.35376%;
+  margin-bottom: 1.94986%;
+}
+
 .appInfo {
   padding: 0 4% 0;
 }
