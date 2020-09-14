@@ -422,11 +422,11 @@ body {
   margin-right: 7px;
 }
 
-.visualContents {
+.thumbnail {
   padding: 0 8px;
 }
 
-.visualContents ul {
+.thumbnail__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,11 +437,105 @@ body {
   justify-content: space-between;
 }
 
-.visualContents li {
+.thumbnail__item {
   background: #ccc;
   width: 49.02507%;
   padding-top: 47.35376%;
   margin-bottom: 1.94986%;
+  position: relative;
+  z-index: 0;
+}
+
+.thumbnail__link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.thumbnail__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.thumbnail__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 5px;
+  left: 7px;
+}
+
+.thumbnail__label li {
+  margin-right: 3px;
+}
+
+.thumbnail__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  letter-spacing: .05em;
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+}
+
+.thumbnail__title {
+  font-size: 1.2rem;
+  font-size: 3.2vw;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #000000aa;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.thumbnail__user {
+  font-size: 1rem;
+  font-size: 2.66667vw;
+  text-shadow: 1px 1px 3px #000000aa;
+  margin-right: 10px;
+}
+
+.thumbnail__reaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1rem;
+  font-size: 2.66667vw;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: .4em 1.1em .4em .9em;
+}
+
+.thumbnail__splash {
+  background: url(//pocketmonster-gogo.com/temp_img/r0205261200/splash.png) no-repeat left center/auto 100%;
+  padding-left: 1.5em;
+  margin-right: .5em;
+}
+
+.thumbnail__like {
+  background: url(//pocketmonster-gogo.com/temp_img/r0205261200/heart.png) no-repeat left center/auto 100%;
+  padding-left: 1.5em;
 }
 
 .appInfo {
