@@ -65,20 +65,19 @@ $block: appInfo;
 
 
     &__caution {
-        color: $fcDF;
-
-
 
         dt {
-            font-size: fsVw($fsDF);
+            @include fs($fsDFL);
             font-weight: bold;
+            color: #fa2d2d;
             margin-bottom: perCalc(5, 345);
         }
 
 
 
         dd {
-            font-size: fsVw($fsDFS);
+            @include fs($fsDF);
+            line-height: 1.5;
         }
     }
 }

@@ -1,25 +1,17 @@
 $block: review;
 
 .#{$block} {
-    border-top: 1px solid #707070;
-    border-bottom: 1px solid #707070;
-    padding: 15px 0 20px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    padding: perCalc(15, 345) 0 perCalc(20, 345);
     margin-bottom: perCalc(50, 345);
 
 
 
     &__header {
-        font-size: fsVw($fsDF);
+        @include fs($fsDFL);
         font-weight: bold;
-        color: #000;
-        margin-bottom: 20px;
-    }
-
-
-
-    &__itemList {
-        background-color: #F2F2F6;
-        padding: perCalc(12, 345);
+        margin-bottom: perCalc(20, 345);
     }
 
 
@@ -28,33 +20,36 @@ $block: review;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        font-size: fsVw($fs1S);
+        @include fs($fsDFS);
+        border-radius: 5px;
+        background-color: #F2F2F6;
+        padding: perCalc(12, 345);
     }
 
 
 
     &__itemHeader {
         font-weight: bold;
-        color: #000;
         margin-bottom: 6px;
     }
 
 
 
     &__date {
-        color: #85858A;
+        color: $fc02;
         margin-bottom: 6px;
     }
 
 
 
     &__user {
-        color: #85858A;
+        color: $fc02;
     }
 
 
 
     &__desc {
-        margin-top: 15px;
+        line-height: 1.5;
+        margin-top: perCalc(15, 321);
     }
 }
