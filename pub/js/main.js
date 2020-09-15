@@ -127,21 +127,26 @@
             thumbnailItemElem.id = thumbnailId;
             thumbnailItemElem.classList.add('thumbnail__item');
             thumbnailList.appendChild(thumbnailItemElem);
-            thumbnailItemElem.style.backgroundImage = `url(${this.thumbnailImg})`;
 
-            // const ph = <?php echo($send_url); ?>;
-            const thumbnailLinkElem = document.createElement('a');
-            thumbnailLinkElem.classList.add('thumbnail__link');
-            thumbnailLinkElem.href = ;
-            thumbnailItemElem.appendChild(thumbnailLinkElem);
-
-            const thumbnailImgElem = document.createElement('img');
-            thumbnailImgElem.classList.add('thumbnail__img');
-            thumbnailLinkElem.appendChild(thumbnailImgElem);
+            if(this.thumbnailImg.match(/\.(jpg|png|gif)$/)) {
+                const thumbnailImgElem = document.createElement('img');
+                thumbnailImgElem.classList.add('thumbnail__img');
+                thumbnailImgElem.src = this.thumbnailImg;
+                thumbnailItemElem.appendChild(thumbnailImgElem);
+            } else if(this.thumbnailImg.match(/\.(mp4)$/)) {
+                const thumbnailImgElem = document.createElement('video');
+                thumbnailImgElem.classList.add('thumbnail__img');
+                thumbnailImgElem.src = this.thumbnailImg;
+                thumbnailImgElem.setAttribute('playsinline', '');
+                thumbnailImgElem.setAttribute('muted', '');
+                thumbnailImgElem.autoplay = true;
+                thumbnailImgElem.loop = true;
+                thumbnailItemElem.appendChild(thumbnailImgElem);
+            }
 
             const thumbnailInfoElem = document.createElement('div');
             thumbnailInfoElem.classList.add('thumbnail__info');
-            thumbnailLinkElem.appendChild(thumbnailInfoElem);
+            thumbnailItemElem.appendChild(thumbnailInfoElem);
     
             const thumbnailTitleElem = document.createElement('div');
             thumbnailTitleElem.classList.add('thumbnail__title');
@@ -168,8 +173,8 @@
             thumbnailReactionElem.appendChild(thumbnailLikeCountElem);
 
             const thumbnailLabelElem = document.createElement('ul');
-            thumbnailLinkElem.appendChild(thumbnailLabelElem);
             thumbnailLabelElem.classList.add('thumbnail__label');
+            thumbnailItemElem.appendChild(thumbnailLabelElem);
     
             if(this.label.includes(label.live) === true) {
                 const thumbnailLiveLabelElem = document.createElement('li');
@@ -198,6 +203,10 @@
                 thumbnailMarkLabelElem.textContent = label.mark;
                 thumbnailLabelElem.appendChild(thumbnailMarkLabelElem);
             }
+
+            if(thumbnailLabelElem.children.length === 0) {
+                thumbnailLabelElem.remove();
+            }
         }        
     }
 
@@ -222,7 +231,7 @@
             splashCount: 100,
             likeCount: 10000,
             label: [label.tits, label.live, label.limit],
-            thumbnailImg: '../img/btn-and.png',
+            thumbnailImg: 'https://pocketmonster-gogo.com/video/letsoffpaco/video01.mp4',
         }),
 
         new Post({
@@ -332,7 +341,7 @@
             splashCount: 100,
             likeCount: 10000,
             label: [label.tits, label.live, label.limit],
-            thumbnailImg: '../img/r18.png',
+            thumbnailImg: 'https://pocketmonster-gogo.com/video/letsoffpaco/video01.mp4',
         }),
 
         new Post({

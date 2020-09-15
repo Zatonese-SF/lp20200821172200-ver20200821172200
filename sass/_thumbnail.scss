@@ -14,26 +14,13 @@ $block: thumbnail;
 
     
     &__item {
+        color: #fff;
         background: #ccc;
         width: perCalc(176, 359);
         padding-top: perCalc(170, 359);
         margin-bottom: perCalc(7, 359);
         position: relative;
         z-index: 0;
-    }
-
-
-
-    &__link {
-        display: block;
-        text-decoration: none;
-        color: #fff;
-        // background-color: red;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
     }
 
 
