@@ -5,9 +5,17 @@
     }
 
     @function vwCalc($size, $viewport: $vpW-std) {
-        $rate: 100 / $viewport;
-        @return $rate * $size * 1vw;
+        @return ($size / $viewport * 100) * 1vw;
     }
+
+    @function calcVw($size, $viewport: $vpW-std) {
+        @return ($size / $viewport * 100) * 1vw;
+    }
+
+    // @function vwCalc($size, $viewport: $vpW-std) {
+    //     $rate: 100 / $viewport;
+    //     @return $rate * $size * 1vw;
+    // }
 
 // ▲ Calc ▲
 

@@ -1,3 +1,35 @@
+// ▼ prty ▼
+
+    @mixin prtyVwPx($property, $value01: null, $value02: null, $value03: null, $value04: null, $unit:vw) {
+
+        @if $value01 != null and $value02 == null and $value03 == null and $value04 == null {
+
+            #{$property}: $value01 + px;
+            #{$property}: calcVw($value01);
+
+        } @else if $value01 != null and $value02 != null and $value03 == null and $value04 == null {
+
+            #{$property}: $value01 + px $value02 + px;
+            #{$property}: calcVw($value01) calcVw($value02);
+
+        } @else if $value01 != null and $value02 != null and $value03 != null and $value04 == null {
+
+            #{$property}: $value01 + px $value02 + px $value03 + px;
+            #{$property}: calcVw($value01) calcVw($value02) calcVw($value03);
+
+        } @else if $value01 != null and $value02 != null and $value03 != null and $value04 != null {
+
+            #{$property}: $value01 + px $value02 + px $value03 + px $value03 + px;
+            #{$property}: calcVw($value01) calcVw($value02) calcVw($value03) calcVw($value04);
+        }
+    }
+
+// ▲ prty ▲
+
+
+
+
+
 // ▼ Text ▼
 
     @mixin fs ($fs:$fsDF, $unit:vw) {
@@ -418,6 +450,8 @@
     }
 
 // ▲ Text ▲
+
+
 
 
 

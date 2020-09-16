@@ -3,15 +3,15 @@ $block: review;
 .#{$block} {
     border-top: 1px solid #aaa;
     border-bottom: 1px solid #aaa;
-    padding: perCalc(15, 345) 0 perCalc(20, 345);
-    margin-bottom: perCalc(50, 345);
+    @include prtyVwPx(padding, 15, 0, 20);
+    @include prtyVwPx(margin-bottom, 50);
 
 
 
     &__header {
         @include fs($fsDFL);
         font-weight: bold;
-        margin-bottom: perCalc(20, 345);
+        @include prtyVwPx(margin-bottom, 20);
     }
 
 
@@ -23,21 +23,21 @@ $block: review;
         @include fs($fsDFS);
         border-radius: 5px;
         background-color: #F2F2F6;
-        padding: perCalc(12, 345);
+        @include prtyVwPx(padding, 12);
     }
 
 
 
     &__itemHeader {
         font-weight: bold;
-        margin-bottom: 6px;
+        @include prtyVwPx(margin-bottom, 6);
     }
 
 
 
     &__date {
         color: $fc02;
-        margin-bottom: 6px;
+        @include prtyVwPx(margin-bottom, 6);
     }
 
 
@@ -50,6 +50,6 @@ $block: review;
 
     &__desc {
         line-height: 1.5;
-        margin-top: perCalc(15, 321);
+        @include prtyVwPx(margin-top, 15);
     }
 }
