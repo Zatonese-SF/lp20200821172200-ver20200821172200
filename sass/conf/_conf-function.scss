@@ -1,16 +1,20 @@
 // ▼ Calc ▼
 
-    @function perCalc($size, $stdSize) {
+    @function calcPer($size, $stdSize) {
         @return ($size / $stdSize * 100) * 1%;
-    }
-
-    @function vwCalc($size, $viewport: $vpW-std) {
-        @return ($size / $viewport * 100) * 1vw;
     }
 
     @function calcVw($size, $viewport: $vpW-std) {
         @return ($size / $viewport * 100) * 1vw;
     }
+
+    // @function perCalc($size, $stdSize) {
+    //     @return ($size / $stdSize * 100) * 1%;
+    // }
+
+    // @function vwCalc($size, $viewport: $vpW-std) {
+    //     @return ($size / $viewport * 100) * 1vw;
+    // }
 
     // @function vwCalc($size, $viewport: $vpW-std) {
     //     $rate: 100 / $viewport;

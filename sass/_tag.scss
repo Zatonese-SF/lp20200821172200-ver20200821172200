@@ -5,9 +5,12 @@ $block: tag;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding-left: perCalc(15, 375);
+    padding-left: 15px;
+    padding-left: calcVw(15);
     margin-bottom: 20px;
+    margin-bottom: calcVw(20);
     padding-bottom: 1px;
+    padding-bottom: calcVw(1);
 
     &::-webkit-scrollbar {
         display: none;
@@ -19,6 +22,7 @@ $block: tag;
 
         &:nth-child(1), &:nth-child(2) {
             margin-bottom: 8px;
+            margin-bottom: clacVw(8);
         }
     }
     
@@ -34,6 +38,7 @@ $block: tag;
                 display: block;
                 flex-shrink: 0;
                 width: 8px;
+                width: calacVw(8);
             }
         }
         
@@ -45,7 +50,9 @@ $block: tag;
             border-radius: 5px;
             border: solid 1px #707070;
             padding: 7px;
+            padding: calcVw(7);
             margin-right: 7px;
+            margin-right: calcVw(7);
         }
     }
 }

@@ -183,7 +183,8 @@ body {
 }
 
 .siteHeader__r18 {
-  width: 9.6%;
+  width: 36px;
+  width: 9.6vw;
 }
 
 .siteHeader__r18 img {
@@ -199,24 +200,29 @@ body {
   order: 1;
   background-color: #F2F2F7;
   border-bottom: 1px solid #BDBDC3;
-  padding: 3.2% 4% 3.2% 5.33333%;
+  padding: 12px 15px 12px 20px;
+  padding: 3.2vw 4vw 3.2vw 5.33333vw;
 }
 
 .appInfoSub__infoText {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
-  margin-left: 2.66667%;
+  margin-left: 10px;
+  margin-left: 2.66667vw;
 }
 
 .appInfoSub__name {
   font-size: 3.73333vw;
-  margin: 3px 0 10px;
+  margin: 5px 0 7px;
+  margin: 1.33333vw 0 1.86667vw;
 }
 
 .appInfoSub__icon {
-  width: 16%;
-  height: 16%;
+  width: 60px;
+  width: 16vw;
+  height: 60px;
+  height: 16vw;
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
@@ -230,6 +236,7 @@ body {
   font-size: 2.66667vw;
   color: #777777;
   margin-bottom: 5px;
+  margin-bottom: 1.33333vw;
 }
 
 .appInfoSub__store {
@@ -256,6 +263,7 @@ body {
   display: flex;
   background-color: #444;
   margin-bottom: 10px;
+  margin-bottom: 2.66667vw;
   position: relative;
   z-index: 0;
 }
@@ -266,6 +274,7 @@ body {
   color: #fff;
   background-color: #555;
   padding: 10px 15px;
+  padding: 2.66667vw 4vw;
   position: relative;
   z-index: 1;
 }
@@ -349,7 +358,9 @@ body {
 .mainVisual {
   position: relative;
   padding: 0 8px 15px;
+  padding: 0 2.13333vw 4vw;
   margin-bottom: 20px;
+  margin-bottom: 5.33333vw;
 }
 
 .mainVisual li img {
@@ -369,10 +380,11 @@ body {
   opacity: 0.5;
   /* 半透明（デフォルトでは0.2） */
   margin-right: 7px;
+  margin-right: 1.86667vw;
 }
 
 .swiper-pagination-bullet:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 /* 現在のスライドのスタイル */
@@ -388,9 +400,12 @@ body {
   overflow-x: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-left: 4%;
+  padding-left: 15px;
+  padding-left: 4vw;
   margin-bottom: 20px;
+  margin-bottom: 5.33333vw;
   padding-bottom: 1px;
+  padding-bottom: 0.26667vw;
 }
 
 .tag::-webkit-scrollbar {
@@ -399,6 +414,7 @@ body {
 
 .tag__listWrap:nth-child(1), .tag__listWrap:nth-child(2) {
   margin-bottom: 8px;
+  margin-bottom: clacVw(8);
 }
 
 .tag__list {
@@ -413,6 +429,7 @@ body {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 8px;
+  width: calacVw(8);
 }
 
 .tag__list li {
@@ -422,7 +439,9 @@ body {
   border-radius: 5px;
   border: solid 1px #707070;
   padding: 7px;
+  padding: 1.86667vw;
   margin-right: 7px;
+  margin-right: 1.86667vw;
 }
 
 .thumbnail {
@@ -628,7 +647,7 @@ body {
 .appInfo__caution dd {
   font-size: 1.6rem;
   font-size: 4.26667vw;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .review {
@@ -648,6 +667,10 @@ body {
   margin-bottom: 5.33333vw;
 }
 
+.review__itemHeader {
+  width: 100%;
+}
+
 .review__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -657,12 +680,20 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
   font-size: 1.4rem;
   font-size: 3.73333vw;
-  border-radius: 5px;
   background-color: #F2F2F6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
   padding: 12px;
   padding: 3.2vw;
+  height: 45.33333vw;
 }
 
 .review__itemHeader {
