@@ -16,7 +16,7 @@ $block: review;
 
 
 
-    &__itemHeader {
+    &__title {
         width: 100%;
     }
 
@@ -38,7 +38,7 @@ $block: review;
 
 
 
-    &__itemHeader {
+    &__title {
         font-weight: bold;
         @include prtyVwPx(margin-bottom, 6);
     }
@@ -46,6 +46,7 @@ $block: review;
 
 
     &__date {
+        text-align: right;
         color: $fc02;
         @include prtyVwPx(margin-bottom, 6);
     }
@@ -53,12 +54,13 @@ $block: review;
 
 
     &__user {
+        text-align: right;
         color: $fc02;
     }
 
 
 
-    &__desc {
+    &__detail {
         line-height: 1.5;
         @include prtyVwPx(margin-top, 15);
     }

@@ -667,7 +667,7 @@ body {
   margin-bottom: 5.33333vw;
 }
 
-.review__itemHeader {
+.review__title {
   width: 100%;
 }
 
@@ -696,23 +696,25 @@ body {
   height: 45.33333vw;
 }
 
-.review__itemHeader {
+.review__title {
   font-weight: bold;
   margin-bottom: 6px;
   margin-bottom: 1.6vw;
 }
 
 .review__date {
+  text-align: right;
   color: #85858A;
   margin-bottom: 6px;
   margin-bottom: 1.6vw;
 }
 
 .review__user {
+  text-align: right;
   color: #85858A;
 }
 
-.review__desc {
+.review__detail {
   line-height: 1.5;
   margin-top: 15px;
   margin-top: 4vw;
