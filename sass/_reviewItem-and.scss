@@ -1,0 +1,94 @@
+$block: reviewItem-and;
+
+.#{$block} {
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    @include prtyVwPx(padding, 15, 0, 20);
+    @include prtyVwPx(margin-bottom, 50);
+
+
+
+    &__header {
+        @include fs($fsDFL);
+        font-weight: bold;
+        @include prtyVwPx(margin-bottom, 20);
+    }
+
+
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        @include fs($fsDFS);
+        background-color: #f7f7f7;
+        box-sizing: border-box;
+        border-radius: 5px;
+        @include prtyVwPx(padding, 12);
+        height: calcVw(170);
+    }
+
+
+
+    &__user {
+        color: #222222;
+        width: 100%;
+        margin-bottom: calcVw(10);
+    }
+
+
+
+    &__rate {
+        display: block;
+        position: relative;
+        color: #cccccc;
+        margin-right: calcVw(6);
+
+
+
+        &::before {
+            content: '★★★★★';
+        }
+
+
+
+        &::after {
+            content: '★★★★★';
+            overflow: hidden;
+            color: $scAnd;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+
+        &--4::after {
+            width: 80%;
+        }
+
+        &--4_5::after {
+            width: 90%;
+        }
+
+        &--5::after {
+            width: 100%;
+        }
+    }
+
+
+
+    &__date {
+        text-align: right;
+        color: $fc02;
+    }
+
+
+
+    &__detail {
+        line-height: 1.5;
+        color: #555555;
+        @include prtyVwPx(margin-top, 10);
+    }
+}

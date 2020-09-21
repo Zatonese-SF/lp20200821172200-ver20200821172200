@@ -1,0 +1,87 @@
+$block: reviewItem-ios;
+
+.#{$block} {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+        @include fs($fsDFS);
+        background-color: #F2F2F6;
+        box-sizing: border-box;
+        border-radius: 5px;
+        @include prtyVwPx(padding, 12);
+        height: calcVw(170);
+
+
+
+    &__title {
+        font-weight: bold;
+        @include prtyVwPx(margin-bottom, 6);
+    }
+
+
+
+    &__rate {
+        display: block;
+        position: relative;
+        color: #EE8834;
+
+
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+        }
+        
+
+
+        &::before {
+            content: '☆☆☆☆☆';
+        }
+
+
+
+        &::after {
+            content: '★★★★★';
+            overflow: hidden;
+        }
+
+
+
+        &--4::after {
+            width: 80%;
+        }
+
+        &--4_5::after {
+            width: 90%;
+        }
+
+        &--5::after {
+            width: 100%;
+        }
+    }
+
+
+
+    &__date {
+        text-align: right;
+        color: $fc02;
+        @include prtyVwPx(margin-bottom, 6);
+    }
+
+
+
+    &__user {
+        text-align: right;
+        color: $fc02;
+    }
+
+
+
+    &__detail {
+        line-height: 1.5;
+        @include prtyVwPx(margin-top, 15);
+    }
+}
