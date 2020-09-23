@@ -1,17 +1,19 @@
 $block: modal;
 
 .#{$block} {
+    display: none;
     border-radius: 5px;
     background-color: #fff;
+    box-sizing: border-box;
     padding: 10px;
     padding: calcVw(10) calcVw(10) calcVw(30) calcVw(10);
     width: 325px;
     width: calcVw(325);
+    margin: 0 auto;
     position: absolute;
     top: calcVw(40);
     left: 0;
     right: 0;
-    margin: 0 auto;
     z-index: 10;
 
 
@@ -79,12 +81,13 @@ $block: modal;
 
 
     &__close {
-        background-color: #000;
-        padding: calcVw(5);
-        width: calcVw(20);
+        background: rgba(0, 0, 0, 0.4);
+        padding: calcVw(6) calcVw(7);
+        width: calcVw(15);
         position: absolute;
         top: 0;
         right: 0;
+        transform: translate(40%, -50%);
 
 
 

@@ -403,4 +403,48 @@
         postsShuffle[i].thumbnail();
     }
 
+
+
+
+    const modal = document.getElementById('modal');
+    const modalClose = document.getElementById('modalClose');
+    const mask = document.getElementById('mask');
+    
+    const mainVisualItem = document.querySelectorAll('#mainVisual li');
+    const tagItem = document.querySelectorAll('.tag__list li');
+    const thumbnailItem = document.querySelectorAll('#thumbnailList li');
+
+
+    
+    const modalOpenProc = () => {
+        modal.style.display = 'block';
+        mask.style.display = 'block';
+    };
+    
+    const modalCloseProc = () => {
+        modal.style.display = 'none';
+        mask.style.display = 'none';
+    };
+
+
+
+    mainVisualItem.forEach((item) => {
+
+        item.addEventListener('click', modalOpenProc);
+    });
+
+    tagItem.forEach((item) => {
+
+        item.addEventListener('click', modalOpenProc);
+    });
+
+    thumbnailItem.forEach((item) => {
+
+        item.addEventListener('click', modalOpenProc);
+    });
+
+    modalClose.addEventListener('click', modalCloseProc);
+
+    mask.addEventListener('click', modalCloseProc);
+
 }
