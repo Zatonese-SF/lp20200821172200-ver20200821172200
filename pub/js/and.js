@@ -49,25 +49,30 @@
         }
     }
 
-    new Review({
-        user: 'pooiu',
-        date: '20',
-        rate: 4.5,
-        detail: 'このアプリ最高すぎ！神アプリや〜',
-    });
 
-    new Review({
-        user: 'pooiu',
-        date: '2020年9月17日',
-        rate: 3,
-        detail: 'このアプリ最高すぎ！神アプリや〜',
-    });
 
-    new Review({
-        user: 'pooiu',
-        date: '2020年9月17日',
-        rate: 3,
-        detail: 'このアプリ最高すぎ！神アプリや〜',
-    });
+    const reviews = [
+
+        new Review({
+            user: 'pooiu',
+            date: '20',
+            rate: 5,
+            detail: 'このアプリ最高すぎ！神アプリや〜',
+        }),
+
+        new Review({
+            user: 'pooiu',
+            date: '2020年9月17日',
+            rate: 4,
+            detail: 'このアプリ最高すぎ！神アプリや〜',
+        }),
+
+        new Review({
+            user: 'pooiu',
+            date: '2020年9月17日',
+            rate: 4.5,
+            detail: 'このアプリ最高すぎ！神アプリや〜',
+        }),
+    ]
 
 }

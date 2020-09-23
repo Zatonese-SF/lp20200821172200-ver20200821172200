@@ -150,6 +150,17 @@ body {
   letter-spacing: 0.1em;
 }
 
+body::before {
+  content: '';
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+}
+
 .topContents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -835,4 +846,80 @@ body {
   color: #555555;
   margin-top: 10px;
   margin-top: 2.66667vw;
+}
+
+.modal {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  padding: 2.66667vw 2.66667vw 8vw 2.66667vw;
+  width: 325px;
+  width: 86.66667vw;
+  position: absolute;
+  top: 10.66667vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.modal__visual {
+  background-color: #777;
+  padding-top: 215px;
+  padding-top: 57.33333vw;
+  margin-bottom: 18.66667vw;
+}
+
+.modal__appInfo {
+  text-align: center;
+}
+
+.modal__appIcon {
+  display: block;
+  width: 85px;
+  width: 22.66667vw;
+  height: 85px;
+  height: 22.66667vw;
+  margin-bottom: 20px;
+  margin: 0 auto 5.33333vw;
+}
+
+.modal__appName {
+  font-size: 6.4vw;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-bottom: 2.66667vw;
+}
+
+.modal__appSub {
+  font-size: 3.73333vw;
+  color: #777777;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-bottom: 8vw;
+}
+
+.modal__appDlBtn {
+  display: block;
+  width: 200px;
+  width: 53.33333vw;
+  margin: 0 auto;
+}
+
+.modal__appDlBtn img {
+  width: 100%;
+}
+
+.modal__close {
+  background-color: #000;
+  padding: 1.33333vw;
+  width: 5.33333vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal__close img {
+  width: 100%;
 }

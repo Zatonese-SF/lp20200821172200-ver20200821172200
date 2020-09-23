@@ -1,0 +1,95 @@
+$block: modal;
+
+.#{$block} {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px;
+    padding: calcVw(10) calcVw(10) calcVw(30) calcVw(10);
+    width: 325px;
+    width: calcVw(325);
+    position: absolute;
+    top: calcVw(40);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+
+
+
+    &__visual {
+        background-color: #777;
+        padding-top: 215px;
+        padding-top: calcVw(215);
+        margin-bottom: calcVw(70);
+    }
+
+
+
+    &__appInfo {
+        text-align: center;
+    }
+
+
+
+    &__appIcon {
+        display: block;
+        width: 85px;
+        width: calcVw(85);
+        height: 85px;
+        height: calcVw(85);
+        margin-bottom: 20px;
+        margin: 0 auto calcVw(20);
+    }
+
+
+
+    &__appName {
+        font-size: fsVw($fs2L);
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-bottom: calcVw(10);
+    }
+
+
+
+    &__appSub {
+        font-size: fsVw($fsDFS);
+        color: $fc01;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-bottom: calcVw(30);
+    }
+
+
+
+    &__appDlBtn {
+        display: block;
+        width: 200px;
+        width: calcVw(200);
+        margin: 0 auto;
+
+
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+
+    &__close {
+        background-color: #000;
+        padding: calcVw(5);
+        width: calcVw(20);
+        position: absolute;
+        top: 0;
+        right: 0;
+
+
+
+        img {
+            width: 100%;
+        }
+    }
+}
