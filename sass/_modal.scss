@@ -10,19 +10,31 @@ $block: modal;
     width: 325px;
     width: calcVw(325);
     margin: 0 auto;
-    position: absolute;
+    position: fixed;
     top: calcVw(40);
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 1;
 
 
 
     &__visual {
-        background-color: #777;
         padding-top: 215px;
         padding-top: calcVw(215);
         margin-bottom: calcVw(70);
+        position: relative;
+    }
+
+
+
+    &__visualImg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
 

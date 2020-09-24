@@ -82,13 +82,13 @@
 
 
 
-        <div class="mainVisual">
+        <div id="mainVisual" class="mainVisual">
 
             <div class="swiper-container slider1">
 
                 <ul class="swiper-wrapper">
 
-                    <li class="swiper-slide"><img src="../img/mv_sample.png"></li>
+                    <li  class="swiper-slide"><img src="../img/mv_sample.png"></li>
                     <li class="swiper-slide"><img src="../img/mv_sample-02.png"></li>
                     <li class="swiper-slide"><img src="../img/mv_sample-03.png"></li>
                     <li class="swiper-slide"><img src="../img/mv_sample-04.png"></li>
@@ -178,9 +178,49 @@
         </ul>
 
 
-        
+
+
+
+        <div id="mask" class="mask"></div>
+
+        <div id="modal" class="modal">
+
+            <div id="modalVisual" class="modal__visual">
+                <p>サンプルサンプルサンプルサンプル</p>
+            </div>
+
+
+
+            <div class="modal_appInfo">
+                
+                <img class="modal__appIcon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
+
+                <p class="modal__appName"><?php echo(IOS_NAME01); ?></p>
+
+                <p class="modal__appSub">オフパコ&#0183;ソーシャル&#0183;ネットワーク</p>
+
+                <a class="modal__appDlBtn" href="<?php echo($send_url); ?>" alt="Aoo Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
+
+            </div>
+
+            <div id="modalClose" class="modal__close"><img src="../img/close.svg" alt="閉じる"></div>
+
+        </div>
+
+
+
+
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- jQuery UI -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
         <script src="../js/main.js"></script>
-        <script src="../js/and.js"></script>
+        <script src="../js/ios.js"></script>
+        
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="../js/swiper_org.js"></script>
         
