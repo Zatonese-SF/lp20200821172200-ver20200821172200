@@ -12,7 +12,8 @@ $block: reviewItem-ios;
         border-radius: 5px;
         @include prtyVwPx(padding, 12);
         height: calcVw(170);
-
+        position: relative;
+        
 
 
     &__title {

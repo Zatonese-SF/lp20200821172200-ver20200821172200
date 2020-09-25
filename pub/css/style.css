@@ -199,10 +199,15 @@ body {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
+  width: 100%;
   background-color: #F2F2F7;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   border-bottom: 1px solid #BDBDC3;
   padding: 12px 15px 12px 20px;
   padding: 3.2vw 4vw 3.2vw 5.33333vw;
+  position: fixed;
+  z-index: 1;
 }
 
 .appInfoSub__infoText {
@@ -287,25 +292,25 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-animation: headLineSP 45s linear infinite;
-  animation: headLineSP 45s linear infinite;
+  -webkit-animation: headLine 13s linear infinite;
+  animation: headLine 13s linear infinite;
 }
 
-@-webkit-keyframes headLineSP {
+@-webkit-keyframes headLine {
   from {
     opacity: 1;
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+    -webkit-transform: translateX(40%);
+    transform: translateX(40%);
     visibility: visible;
   }
-  33% {
+  90% {
     opacity: 1;
+    visibility: visible;
+  }
+  91% {
+    opacity: 0;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-    visibility: visible;
-  }
-  34% {
-    opacity: 0;
     visibility: hidden;
   }
   99% {
@@ -318,21 +323,21 @@ body {
   }
 }
 
-@keyframes headLineSP {
+@keyframes headLine {
   from {
     opacity: 1;
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+    -webkit-transform: translateX(40%);
+    transform: translateX(40%);
     visibility: visible;
   }
-  33% {
+  90% {
     opacity: 1;
+    visibility: visible;
+  }
+  91% {
+    opacity: 0;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-    visibility: visible;
-  }
-  34% {
-    opacity: 0;
     visibility: hidden;
   }
   99% {
@@ -362,6 +367,8 @@ body {
   padding: 0 2.13333vw 4vw;
   margin-bottom: 20px;
   margin-bottom: 5.33333vw;
+  position: relative;
+  z-index: 0;
 }
 
 .mainVisual li img {
@@ -463,7 +470,6 @@ body {
 
 .thumbnail__item {
   color: #fff;
-  background-color: #ccc;
   width: 176px;
   width: 46.93333vw;
   padding-top: 170px;
@@ -471,7 +477,6 @@ body {
   margin-bottom: 7px;
   margin-bottom: 1.86667vw;
   position: relative;
-  z-index: 0;
 }
 
 .thumbnail__img {
@@ -483,7 +488,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
 }
 
 .thumbnail__label {
@@ -658,6 +662,8 @@ body {
   padding: 4vw 0vw 5.33333vw;
   margin-bottom: 50px;
   margin-bottom: 13.33333vw;
+  position: relative;
+  z-index: 0;
 }
 
 .review__header {
@@ -691,6 +697,7 @@ body {
   padding: 12px;
   padding: 3.2vw;
   height: 45.33333vw;
+  position: relative;
 }
 
 .reviewItem-ios__title {
@@ -853,7 +860,7 @@ body {
   top: 10.66667vw;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .modal__visual {
@@ -938,5 +945,5 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }

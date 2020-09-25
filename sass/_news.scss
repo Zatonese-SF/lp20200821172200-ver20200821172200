@@ -27,21 +27,22 @@ $block: news;
     dl {
         display: flex;
         align-items: center;
-        animation : headLineSP 45s linear infinite;
+        animation : headLine 13s linear infinite;
 
-        @keyframes headLineSP{
+        @keyframes headLine {
+            
             from {
                 opacity: 1;
-                transform: translateX(100%);
+                transform: translateX(40%);
                 visibility: visible;
             }
-            33% {
+            90% {
                 opacity: 1;
-                transform: translateX(-100%);
                 visibility: visible;
             }
-            34% {
+            91% {
                 opacity: 0;
+                transform: translateX(-100%);
                 visibility: hidden;
             }
             99% { opacity: 0;}

@@ -430,6 +430,22 @@
         const modalClose = document.getElementById('modalClose');
         const mask = document.getElementById('mask');
 
+        // ▼ 背景固定&解除用宣言 ▼
+
+            let scrollPosition;
+            //iOS（iPadOSを含む）かどうかのUA判定
+            const ua = window.navigator.userAgent.toLowerCase();
+            const isiOS = ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('macintosh') > -1 && 'ontouchend' in document;
+        
+        // ▲ 背景固定&解除用宣言 ▲
+
+
+
+        const appInfoSub = document.getElementById('appInfoSub');
+        const siteHeader = document.getElementById('siteHeader');
+
+
+
         const modalOpenProc = () => {
             
             const modalVisuals = [
@@ -462,25 +478,75 @@
                 modalVisualImgElem.autoplay = true;
                 modalVisualImgElem.loop = true;
             }
+
+            appInfoSub.style.display = 'none';
+            siteHeader.style.marginTop = '0';
             
             $('#modal').show('fade', 200);
             $('#mask').show('fade', 200);
+
+
+
+            // ▼ 背景固定 ▼
+
+                // bodyのスクロール固定
+                function bodyFixedOn() {
+                    if(isiOS){
+                        // iOSの場合
+                        scrollPosition = $(window).scrollTop();
+                        $('body').css('position', 'fixed');
+                        $('body').css('top', '-' + scrollPosition + 'px');
+                    } else {
+                        // それ以外
+                        $('body').css('overflow', 'hidden');
+                    }
+                }
+
+                bodyFixedOn();
+
+            // ▲ 背景固定 ▲
         };
         
         const modalCloseProc = () => {
             document.querySelector('.modal__visualImg').remove();
 
+            appInfoSub.style.display = 'flex';
+            siteHeader.style.marginTop = appInfoSubHeight + 'px';
+
             modal.style.display = 'none';
             mask.style.display = 'none';
+
+
+
+            // ▼ 背景固定解除 ▼
+
+                function bodyFixedOff() {
+                    if(isiOS){
+                        // iOSの場合
+                        $('body').css('position', '');
+                        $('body').css('top', '');
+                        $(window).scrollTop(scrollPosition);
+                    }else {
+                        // それ以外
+                        $('body').css('overflow', '');
+                    }
+                }
+
+                bodyFixedOff();
+
+            // ▲ 背景固定解除 ▲
         };
 
 
 
-        const mainVisual = document.getElementById('mainVisual');
+        const mainVisualItem = document.querySelectorAll('#mainVisual li');
         const tagItem = document.querySelectorAll('.tag__list li');
         const thumbnailItem = document.querySelectorAll('#thumbnailList li');
 
-        mainVisual.addEventListener('click', modalOpenProc);
+        mainVisualItem.forEach((item) => {
+
+            item.addEventListener('click', modalOpenProc);
+        });
 
         tagItem.forEach((item) => {
 
