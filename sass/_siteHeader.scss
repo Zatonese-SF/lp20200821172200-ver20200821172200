@@ -1,25 +1,14 @@
 $block: siteHeader;
 
 .#{$block} {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     order: 2;
     
     &__siteTitle {
-        font-family: kozuka-gothic-pro,sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        font-size: fsVw($fsDFL);
-    }
+        width: calcVw(330);
+        padding: calcVw(12) 0;
+        margin: 0 auto; 
 
 
-
-    &__r18 {
-        width: 36px;
-        width: calcVw(36);
-
-        
 
         img {
             width: 100%;

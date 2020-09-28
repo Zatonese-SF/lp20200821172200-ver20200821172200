@@ -3,7 +3,9 @@ $block: modal;
 .#{$block} {
     display: none;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     box-sizing: border-box;
     padding: 10px;
     padding: calcVw(10) calcVw(10) calcVw(30) calcVw(10);
@@ -20,8 +22,8 @@ $block: modal;
 
     &__visual {
         padding-top: 215px;
-        padding-top: calcVw(215);
-        margin-bottom: calcVw(70);
+        padding-top: calcVw(250);
+        margin-bottom: calcVw(50);
         position: relative;
     }
 
@@ -36,6 +38,32 @@ $block: modal;
         top: 0;
         left: 0;
     }
+
+
+
+    &__text {
+        position: absolute;
+        top: calcVw(170);
+        left: 0;
+        z-index: 1;
+
+
+
+        span {
+            display: block;
+            @include fs($fsDFS);
+            font-weight: bold;
+            background-color: rgba(255,255,255,0.8);
+            padding: calcVw(8);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: calcVw(5);
+            }
+        }
+    }
+
 
 
 

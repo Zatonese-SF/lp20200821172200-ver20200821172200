@@ -31,27 +31,39 @@
     
         const tagNames = [
 
-            'あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお',
-            '02',
-            '03',
-            '04',
-            '05',
-            '06',
-            '07',
-            '08',
-            '09',
-            '10',
-            '11',
-            '12',
-            '13',
-            '14',
-            '15',
-            '16',
-            '17',
-            '18',
-            '19',
-            '20',
-            '21',
+            'アナル',
+            'アブノーマル',
+            '今スグ',
+            'SNS',
+            'オッパイ',
+            'オナニー',
+            'おふざけ',
+            'オフパコ',
+            '学生',
+            'ガチ',
+            'ギャル',
+            '巨乳',
+            '激カワ',
+            '激シコ',
+            '限定',
+            'コスプレ',
+            '潮吹き',
+            'シコネタ',
+            '10代',
+            '素人',
+            '即パコ',
+            '痴女',
+            'デカ尻',
+            '生中出し',
+            'ハイクオリティ',
+            'パイパン',
+            'ハメ撮り',
+            '平成女子',
+            'マ●コ',
+            '無修正',
+            'ライブ',
+            '流出',
+            
         ];
 
         const tagNamesShuffledChoices = shuffle([...tagNames]);
@@ -87,7 +99,7 @@
         const label = {
 
             live: 'LIVE',
-            limit: '限定',
+            limited: '限定',
             tits: 'オッパイ',
             mark: 'ま●こ',
         };
@@ -170,28 +182,40 @@
                 if(this.label.includes(label.live) === true) {
                     const thumbnailLiveLabelElem = document.createElement('li');
                     thumbnailLiveLabelElem.classList.add('thumbnail__label-live');
-                    thumbnailLiveLabelElem.textContent = label.live;
+                    const thumbnailLiveLabelImgElem = document.createElement('img');
+                    thumbnailLiveLabelImgElem.src = '../img/live.svg';
+                    thumbnailLiveLabelImgElem.alt = label.live;
+                    thumbnailLiveLabelElem.appendChild(thumbnailLiveLabelImgElem);
                     thumbnailLabelElem.appendChild(thumbnailLiveLabelElem);
                 }
                 
-                if(this.label.includes(label.limit) === true) {
-                    const thumbnaiLimitLabelElem = document.createElement('li');
-                    thumbnaiLimitLabelElem.classList.add('thumbnail__label-limit');
-                    thumbnaiLimitLabelElem.textContent = label.limit;
-                    thumbnailLabelElem.appendChild(thumbnaiLimitLabelElem);
+                if(this.label.includes(label.limited) === true) {
+                    const thumbnaiLimitedLabelElem = document.createElement('li');
+                    thumbnaiLimitedLabelElem.classList.add('thumbnail__label-limited');
+                    const thumbnailLimitedLabelImgElem = document.createElement('img');
+                    thumbnailLimitedLabelImgElem.src = '../img/limited.svg';
+                    thumbnailLimitedLabelImgElem.alt = label.limited;
+                    thumbnaiLimitedLabelElem.appendChild(thumbnailLimitedLabelImgElem);
+                    thumbnailLabelElem.appendChild(thumbnaiLimitedLabelElem);
                 }
                 
                 if(this.label.includes(label.tits) === true) {
                     const thumbnailTitsLabelElem = document.createElement('li');
                     thumbnailTitsLabelElem.classList.add('thumbnail__label-tits');
-                    thumbnailTitsLabelElem.textContent = label.tits;
+                    const thumbnailTitsLabelImgElem = document.createElement('img');
+                    thumbnailTitsLabelImgElem.src = '../img/tits.png';
+                    thumbnailTitsLabelImgElem.alt = label.tits;
+                    thumbnailTitsLabelElem.appendChild(thumbnailTitsLabelImgElem);
                     thumbnailLabelElem.appendChild(thumbnailTitsLabelElem);
                 }
 
                 if(this.label.includes(label.mark) === true) {
                     const thumbnailMarkLabelElem = document.createElement('li');
                     thumbnailMarkLabelElem.classList.add('thumbnail__label-mark');
-                    thumbnailMarkLabelElem.textContent = label.mark;
+                    const thumbnailMarkLabelImgElem = document.createElement('img');
+                    thumbnailMarkLabelImgElem.src = '../img/mark.png';
+                    thumbnailMarkLabelImgElem.alt = label.mark;
+                    thumbnailMarkLabelElem.appendChild(thumbnailMarkLabelImgElem);
                     thumbnailLabelElem.appendChild(thumbnailMarkLabelElem);
                 }
 
@@ -221,7 +245,7 @@
                 title: 'かかこあお',
                 splashCount: 100,
                 likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                label: [label.live, label.limited,label.tits, label.mark],
                 thumbnailImg: 'https://pocketmonster-gogo.com/video/letsoffpaco/video01.mp4',
             }),
 
@@ -231,7 +255,7 @@
                 title: 'かかこあお',
                 splashCount: 100,
                 likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                label: [label.mark],
                 thumbnailImg: '../img/r18.png',
             }),
 

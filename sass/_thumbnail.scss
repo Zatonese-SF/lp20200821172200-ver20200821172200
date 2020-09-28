@@ -3,6 +3,7 @@ $block: thumbnail;
 .#{$block} {
     padding: 0 8px;
     padding: 0 calcVw(8);
+    margin-bottom: calcVw(70);
 
 
 
@@ -43,7 +44,7 @@ $block: thumbnail;
 
     &__label {
         display: flex;
-        // align-items: flex-start;
+        align-items: flex-start;
         position: absolute;
         top: 5px;
         top: calcVw(5);
@@ -103,7 +104,7 @@ $block: thumbnail;
 
 
     &__splash {
-        background: url(//pocketmonster-gogo.com/temp_img/r0205261200/splash.png) no-repeat left center/auto 100%;
+        background: url(../img/splash.png) no-repeat left center/auto 100%;
         padding-left: 1.5em;
         margin-right: .5em;
     }
@@ -111,7 +112,47 @@ $block: thumbnail;
 
 
     &__like {
-        background: url(//pocketmonster-gogo.com/temp_img/r0205261200/heart.png) no-repeat left center/auto 100%;
+        background: url(../img/heart.png) no-repeat left center/auto 100%;
         padding-left: 1.5em;
+    }
+
+
+
+    &__label-live {
+        width: calcVw(40);
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+
+    &__label-limited {
+        width: calcVw(40);
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+
+    &__label-tits {
+        width: calcVw(37);
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+
+    &__label-mark {
+        width: calcVw(30);
+
+        img {
+            width: 100%;
+        }
     }
 }

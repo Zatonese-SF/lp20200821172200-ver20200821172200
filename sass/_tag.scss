@@ -47,8 +47,10 @@ $block: tag;
         li {
             flex-shrink: 0;
             font-size: fsVw($fs1S);
+            font-weight: bold;
+            color: #555;
             border-radius: 5px;
-            border: solid 1px #707070;
+            border: solid 1px $sc01;
             padding: 7px;
             padding: calcVw(7);
             margin-right: 7px;

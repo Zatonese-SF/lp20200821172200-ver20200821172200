@@ -148,7 +148,6 @@ body {
   font-weight: 400;
   color: #333;
   letter-spacing: 0.1em;
-  width: 100%;
 }
 
 .topContents {
@@ -162,33 +161,18 @@ body {
 }
 
 .siteHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
 }
 
 .siteHeader__siteTitle {
-  font-family: kozuka-gothic-pro,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 4.8vw;
+  width: 88vw;
+  padding: 3.2vw 0;
+  margin: 0 auto;
 }
 
-.siteHeader__r18 {
-  width: 36px;
-  width: 9.6vw;
-}
-
-.siteHeader__r18 img {
+.siteHeader__siteTitle img {
   width: 100%;
 }
 
@@ -444,8 +428,10 @@ body {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   font-size: 3.2vw;
+  font-weight: bold;
+  color: #555;
   border-radius: 5px;
-  border: solid 1px #707070;
+  border: solid 1px #ff3399;
   padding: 7px;
   padding: 1.86667vw;
   margin-right: 7px;
@@ -455,6 +441,7 @@ body {
 .thumbnail {
   padding: 0 8px;
   padding: 0 2.13333vw;
+  margin-bottom: 18.66667vw;
 }
 
 .thumbnail__list {
@@ -494,6 +481,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   position: absolute;
   top: 5px;
   top: 1.33333vw;
@@ -555,14 +545,46 @@ body {
 }
 
 .thumbnail__splash {
-  background: url(//pocketmonster-gogo.com/temp_img/r0205261200/splash.png) no-repeat left center/auto 100%;
+  background: url(../img/splash.png) no-repeat left center/auto 100%;
   padding-left: 1.5em;
   margin-right: .5em;
 }
 
 .thumbnail__like {
-  background: url(//pocketmonster-gogo.com/temp_img/r0205261200/heart.png) no-repeat left center/auto 100%;
+  background: url(../img/heart.png) no-repeat left center/auto 100%;
   padding-left: 1.5em;
+}
+
+.thumbnail__label-live {
+  width: 10.66667vw;
+}
+
+.thumbnail__label-live img {
+  width: 100%;
+}
+
+.thumbnail__label-limited {
+  width: 10.66667vw;
+}
+
+.thumbnail__label-limited img {
+  width: 100%;
+}
+
+.thumbnail__label-tits {
+  width: 9.86667vw;
+}
+
+.thumbnail__label-tits img {
+  width: 100%;
+}
+
+.thumbnail__label-mark {
+  width: 8vw;
+}
+
+.thumbnail__label-mark img {
+  width: 100%;
 }
 
 .appInfo {
@@ -848,7 +870,9 @@ body {
 .modal {
   display: none;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
@@ -865,8 +889,8 @@ body {
 
 .modal__visual {
   padding-top: 215px;
-  padding-top: 57.33333vw;
-  margin-bottom: 18.66667vw;
+  padding-top: 66.66667vw;
+  margin-bottom: 13.33333vw;
   position: relative;
 }
 
@@ -879,6 +903,28 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.modal__text {
+  position: absolute;
+  top: 45.33333vw;
+  left: 0;
+  z-index: 1;
+}
+
+.modal__text span {
+  display: block;
+  font-size: 1.4rem;
+  font-size: 3.73333vw;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2.13333vw;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal__text span:nth-child(1), .modal__text span:nth-child(2) {
+  margin-bottom: 1.33333vw;
 }
 
 .modal__appInfo {
