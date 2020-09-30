@@ -441,6 +441,10 @@ body {
 .thumbnail {
   padding: 0 8px;
   padding: 0 2.13333vw;
+}
+
+.thumbnail--main {
+  margin-bottom: 70px;
   margin-bottom: 18.66667vw;
 }
 
@@ -455,15 +459,23 @@ body {
   justify-content: space-between;
 }
 
-.thumbnail__item {
+.thumbnail__mainItem, .thumbnail__pickupItem {
   color: #fff;
   width: 176px;
   width: 46.93333vw;
+  position: relative;
+}
+
+.thumbnail__mainItem {
   padding-top: 170px;
   padding-top: 45.33333vw;
   margin-bottom: 7px;
   margin-bottom: 1.86667vw;
-  position: relative;
+}
+
+.thumbnail__pickupItem {
+  padding-top: 300px;
+  padding-top: 80vw;
 }
 
 .thumbnail__img {
@@ -590,6 +602,7 @@ body {
 .appInfo {
   padding: 0 15px 0;
   padding: 0 4vw 0;
+  margin-bottom: 18.66667vw;
 }
 
 .appInfo__basic {

@@ -2,6 +2,15 @@
 
 {
 
+    const getD = (i) => {
+        const d = new Date();
+        return `${d.getMonth() + 1}月${d.getDate() - i}日`;
+    };
+
+    
+
+
+
     class Review {
 
         constructor({user, title, date, rate, detail}) {
@@ -68,7 +77,7 @@
         new Review({
             user: 'pooiu',
             title: 'はじめるよ',
-            date: '20',
+            date: getD(1),
             rate: 4.5,
             detail: 'このアプリ最高すぎ！神アプリや〜',
         }),
@@ -76,7 +85,15 @@
         new Review({
             user: 'pooiu',
             title: 'はじめるよ',
-            date: '2020年9月17日',
+            date: getD(1),
+            rate: 4,
+            detail: 'このアプリ最高すぎ！神アプリや〜',
+        }),
+
+        new Review({
+            user: 'pooiu',
+            title: 'はじめるよ',
+            date: getD(2),
             rate: 3,
             detail: 'このアプリ最高すぎ！神アプリや〜',
         }),
@@ -84,7 +101,7 @@
         new Review({
             user: 'pooiu',
             title: 'はじめるよ',
-            date: '2020年9月17日',
+            date: getD(3),
             rate: 3,
             detail: 'このアプリ最高すぎ！神アプリや〜',
         }),

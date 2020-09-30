@@ -108,16 +108,15 @@
         
         class Post {
 
-            constructor({id, user, title, thumbnailImg, label, status, likeCount, splashCount}) {
+            constructor({id, user, title, splashCount, likeCount, label, thumbnailImg}) {
 
                 this.id = id;
                 this.user = user;
                 this.title = title;
-                this.thumbnailImg = thumbnailImg;
-                this.label = label;
-                this.status = status;
-                this.likeCount = likeCount;
                 this.splashCount = splashCount;
+                this.likeCount = likeCount;
+                this.label = label;
+                this.thumbnailImg = thumbnailImg;
             }
             
             
@@ -125,18 +124,12 @@
             thumbnail() {
 
                 const thumbnailId = 'thumbnailId' + this.id;
+                
+                const thumbnailList = document.getElementById('thumbnailList');
                 const thumbnailItemElem = document.createElement('li');
                 thumbnailItemElem.id = thumbnailId;
-
-                if(this.status === 'pickup') {
-                    const thumbnailList = document.getElementById('pickupThumbnailList');
-                    thumbnailItemElem.classList.add('thumbnail__pickupItem');
-                    thumbnailList.appendChild(thumbnailItemElem);
-                } else {
-                    const thumbnailList = document.getElementById('mainThumbnailList');
-                    thumbnailItemElem.classList.add('thumbnail__mainItem');
-                    thumbnailList.appendChild(thumbnailItemElem);
-                }
+                thumbnailItemElem.classList.add('thumbnail__item');
+                thumbnailList.appendChild(thumbnailItemElem);
 
                 if(this.thumbnailImg.match(/\.(jpg|png|gif)$/)) {
                     const thumbnailImgElem = document.createElement('img');
@@ -171,17 +164,17 @@
                 const thumbnailReactionElem = document.createElement('div');
                 thumbnailReactionElem.classList.add('thumbnail__reaction');
                 thumbnailInfoElem.appendChild(thumbnailReactionElem);
-
+                
                 const thumbnailSplashCountElem = document.createElement('div');
                 thumbnailSplashCountElem.classList.add('thumbnail__splash');
                 thumbnailSplashCountElem.textContent = this.splashCount;
                 thumbnailReactionElem.appendChild(thumbnailSplashCountElem);
-
+        
                 const thumbnailLikeCountElem = document.createElement('div');
                 thumbnailLikeCountElem.classList.add('thumbnail__like');
                 thumbnailLikeCountElem.textContent = this.likeCount;
                 thumbnailReactionElem.appendChild(thumbnailLikeCountElem);
-                
+
                 const thumbnailLabelElem = document.createElement('ul');
                 thumbnailLabelElem.classList.add('thumbnail__label');
                 thumbnailItemElem.appendChild(thumbnailLabelElem);
@@ -240,21 +233,20 @@
                 id: '01',
                 user: 'pooiu',
                 title: 'はじめるよ',
-                thumbnailImg: '../img/r18.png',
-                label: [],
-                status: 'pickup',
-                likeCount: 10000,
                 splashCount: 100,
+                likeCount: 10000,
+                label: [],
+                thumbnailImg: '../img/r18.png',
             }),
-    
+
             new Post({
                 id: '02',
                 user: 'tete',
                 title: 'かかこあお',
-                thumbnailImg: 'https://pocketmonster-gogo.com/video/letsoffpaco/video01.mp4',
-                label: [label.live, label.limited, label.tits, label.mark],
-                likeCount: 10000,
                 splashCount: 100,
+                likeCount: 10000,
+                label: [label.live, label.limited,label.tits, label.mark],
+                thumbnailImg: 'https://pocketmonster-gogo.com/video/letsoffpaco/video01.mp4',
             }),
 
             new Post({
@@ -395,7 +387,6 @@
                 likeCount: 10000,
                 label: [label.tits, label.live, label.limit],
                 thumbnailImg: '../img/r18.png',
-                status: 'pickup',
             }),
 
             new Post({
@@ -439,41 +430,16 @@
             }),
         ];
 
-        const mainThumbnails = [];
-        const pickupThumbnails = [];
 
 
-
-        posts.forEach((item) => {
-            
-            if(item.status === 'pickup') {
-                pickupThumbnails.push(item);
-                console.log(item.status);
-            } else {
-                mainThumbnails.push(item);
-                console.log(item.status);
-            }
-        });
-
-        // console.log(mainThumbnails);
-        // console.log(pickupThumbnails);
-        
+        const postsShuffle = shuffle([...posts]);
+        console.log(postsShuffle);
 
 
-        const mainThumbnailsShuffle = shuffle([...mainThumbnails]);
-        const pickupThumbnailsShuffle = shuffle([...pickupThumbnails]);
-
-        // console.log(mainThumbnailsShuffle);
-        // console.log(pickupThumbnailsShuffle);
 
         for(let i = 0; i <= 9; i++) {
             
-            mainThumbnailsShuffle[i].thumbnail();
-        }
-        
-        for(let i = 0; i <= 1; i++) {
-            
-            pickupThumbnailsShuffle[i].thumbnail();
+            postsShuffle[i].thumbnail();
         }
 
     // ▲
@@ -536,7 +502,7 @@
 
         const mainVisual = document.getElementById('mainVisual');
         const tagItem = document.querySelectorAll('.tag__list li');
-        const thumbnailItem = document.querySelectorAll('.thumbnailList > li');
+        const thumbnailItem = document.querySelectorAll('#thumbnailList li');
 
         mainVisual.addEventListener('click', modalOpenProc);
 

@@ -3,8 +3,14 @@ $block: thumbnail;
 .#{$block} {
     padding: 0 8px;
     padding: 0 calcVw(8);
-    margin-bottom: calcVw(70);
 
+
+
+    &--main {
+        margin-bottom: 70px;
+        margin-bottom: calcVw(70);
+    }
+    
 
 
     &__list {
@@ -14,17 +20,32 @@ $block: thumbnail;
     }
 
 
+
+    @at-root {
+        %item {
+            color: #fff;
+            width: 176px;
+            width: calcVw(176);
+            position: relative;
+        }
+    }
+
+
     
-    &__item {
-        color: #fff;
-        width: 176px;
-        width: calcVw(176);
+    &__mainItem {
+        @extend %item;
         padding-top: 170px;
         padding-top: calcVw(170);
         margin-bottom: 7px;
         margin-bottom: calcVw(7);
-        position: relative;
-        // z-index: 0;
+        
+    }
+
+
+    &__pickupItem {
+        @extend %item;
+        padding-top: 300px;
+        padding-top: calcVw(300);
     }
 
 
