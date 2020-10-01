@@ -3,6 +3,7 @@ $block: appInfo;
 .#{$block} {
     padding: 0 15px 0;
     padding: 0 calcVw(15) 0;
+    margin-bottom: 70px;
     margin-bottom: calcVw(70);
 
 
@@ -18,11 +19,12 @@ $block: appInfo;
 
 
     &__name {
-        font-size: fsVw($fs2L);
+        @include fs($fs2L);
         font-weight: bold;
-        order: 3;
+        letter-spacing: $ls1S;
         margin-bottom: 10px;
         margin-bottom: calcVw(10);
+        order: 3;
     }
 
 
@@ -32,37 +34,41 @@ $block: appInfo;
         width: calcVw(85);
         height: 85px;
         height: calcVw(85);
-        order: 2;
         margin-bottom: 20px;
         margin-bottom: calcVw(20);
+        order: 2;
     }
 
 
 
     &__copy {
-        font-size: fsVw($fs2L);
+        @include fs($fs2L);
         font-weight: bold;
-        order: 1;
+        letter-spacing: $ls1S;
+        line-height: $lh2S;
+        color: $sc01;
         margin-bottom: 60px;
         margin-bottom: calcVw(60);
+        order: 1;
     }
 
 
 
     &__sub {
-        font-size: fsVw($fsDFS);
+        @include fs($fsDFS);
+        letter-spacing: $lsDF;
         color: $fc01;
-        order: 4;
         margin-bottom: 50px;
         margin-bottom: calcVw(50);
+        order: 4;
     }
 
 
 
     &__dlBtn {
         display: block;
-        width: 240px;
-        width: calcVw(240);
+        width: 260px;
+        width: calcVw(260);
         order: 5;
 
 
@@ -79,6 +85,7 @@ $block: appInfo;
         dt {
             @include fs($fsDFL);
             font-weight: bold;
+            letter-spacing: $lsDF;
             color: #fa2d2d;
             margin-bottom: 5px;
             margin-bottom: calcVw(5);
@@ -88,7 +95,8 @@ $block: appInfo;
 
         dd {
             @include fs($fsDF);
-            line-height: 1.8;
+            letter-spacing: $lsDF;
+            line-height: $lhDF;
         }
     }
 }

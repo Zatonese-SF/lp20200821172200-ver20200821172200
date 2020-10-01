@@ -7,12 +7,13 @@ $block: modal;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     box-sizing: border-box;
-    padding: 10px;
+    padding: 10px 10px 30px 10px;
     padding: calcVw(10) calcVw(10) calcVw(30) calcVw(10);
     width: 325px;
     width: calcVw(325);
     margin: 0 auto;
     position: fixed;
+    top: 40px;
     top: calcVw(40);
     left: 0;
     right: 0;
@@ -21,8 +22,9 @@ $block: modal;
 
 
     &__visual {
-        padding-top: 215px;
+        padding-top: 250px;
         padding-top: calcVw(250);
+        margin-bottom: 50px;
         margin-bottom: calcVw(50);
         position: relative;
     }
@@ -43,6 +45,7 @@ $block: modal;
 
     &__text {
         position: absolute;
+        top: 170px;
         top: calcVw(170);
         left: 0;
         z-index: 1;
@@ -51,14 +54,17 @@ $block: modal;
 
         span {
             display: block;
-            @include fs($fsDFS);
+            @include fs($fsDF);
             font-weight: bold;
+            letter-spacing: $lsDF;
             background-color: rgba(255,255,255,0.8);
-            padding: calcVw(8);
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            padding: 8px;
+            padding: calcVw(8);
 
             &:nth-child(1),
             &:nth-child(2) {
+                margin-bottom: 5px;
                 margin-bottom: calcVw(5);
             }
         }
@@ -86,8 +92,9 @@ $block: modal;
 
 
     &__appName {
-        font-size: fsVw($fs2L);
+        @include fs($fs2L);
         font-weight: bold;
+        letter-spacing: $ls3S;
         text-align: center;
         margin-bottom: 10px;
         margin-bottom: calcVw(10);
@@ -96,7 +103,8 @@ $block: modal;
 
 
     &__appSub {
-        font-size: fsVw($fsDFS);
+        @include fs($fsDFS);
+        letter-spacing: $ls1S;
         color: $fc01;
         text-align: center;
         margin-bottom: 50px;
@@ -122,7 +130,9 @@ $block: modal;
 
     &__close {
         background: rgba(0, 0, 0, 0.4);
+        padding: 6px 7px;
         padding: calcVw(6) calcVw(7);
+        width: 15px;
         width: calcVw(15);
         position: absolute;
         top: 0;

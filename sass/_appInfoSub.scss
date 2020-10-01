@@ -23,7 +23,8 @@ $block: appInfoSub;
 
     
     &__name {
-        font-size: fsVw($fsDFS);
+        @include fs($fsDFS);
+        letter-spacing: $ls2S;
         margin: 5px 0 7px;
         margin: calcVw(5) 0 calcVw(7);
     }
@@ -47,7 +48,8 @@ $block: appInfoSub;
 
 
     &__sub {
-        font-size: fsVw($fs1SS);
+        @include fs($fs1SS);
+        letter-spacing: $lsDF;
         color: $fc01;
         margin-bottom: 5px;
         margin-bottom: calcVw(5);
@@ -56,14 +58,16 @@ $block: appInfoSub;
 
 
     &__store {
-        font-size: fsVw($fs1SS);
+        @include fs($fs1SS);
+        letter-spacing: $ls3S;
         color: $fc01;
     }
 
 
 
     &__dl {
-        font-size: fsVw($fsDF);
+        @include fs($fsDF);
+        letter-spacing: $ls3S;
         text-decoration: none;
         color: $fsLink;
         order: 3;

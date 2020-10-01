@@ -1,10 +1,8 @@
 body {
-    // font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    font-family: kozuka-gothic-pro, sans-serif;
+    font-family: kozuka-gothic-pro, Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     font-style: normal;
     font-weight: 400;
     color: $fcDF;
-    letter-spacing: $lsDF;
     // width: 100%; // モーダル背景用で記述
 }
 

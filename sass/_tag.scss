@@ -46,8 +46,9 @@ $block: tag;
 
         li {
             flex-shrink: 0;
-            font-size: fsVw($fs1S);
+            @include fs($fs1S);
             font-weight: bold;
+            letter-spacing: $ls3S;
             color: #555;
             border-radius: 5px;
             border: solid 1px $sc01;

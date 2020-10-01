@@ -4,9 +4,10 @@
 
     const getD = (i) => {
         const d = new Date();
-        return `${d.getMonth() + 1}月${d.getDate() - i}日`;
+        d.setDate(d.getDate() - i);
+        return `${d.getMonth() + 1}月${d.getDate()}日`;
     };
-
+    
     
 
 

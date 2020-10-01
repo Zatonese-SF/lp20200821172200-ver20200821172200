@@ -16,7 +16,7 @@
             const reviewListElem = document.getElementById('reviewList');
 
             const reviewItemElem = document.createElement('li');
-            reviewItemElem.classList.add('reviewItem-and__item');
+            reviewItemElem.classList.add('reviewItem-and');
             reviewItemElem.classList.add('swiper-slide');
             reviewListElem.appendChild(reviewItemElem);
 

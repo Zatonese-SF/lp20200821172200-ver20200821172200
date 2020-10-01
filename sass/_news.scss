@@ -12,8 +12,9 @@ $block: news;
 
     
     h1 {
-        font-size: fsVw($fsDFS);
+        @include fs($fsDFS);
         font-weight: bold;
+        letter-spacing: $ls2S;
         color: #fff;
         background-color: #555;
         padding: 10px 15px;
@@ -55,15 +56,17 @@ $block: news;
 
 
         dt {
-            font-size: fsVw($fs1S);
+            @include fs($fs1S);
+            letter-spacing: $ls2S;
             color: #FFA500;
         }
 
 
 
         dd {
-            font-size: fsVw($fsDFS);
             white-space: nowrap;
+            @include fs($fsDFS);
+            letter-spacing: $lsDF;
             color: #fff;
         }
     }

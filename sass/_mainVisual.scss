@@ -28,8 +28,8 @@ $block: mainVisual;
 }
 
 .swiper-pagination-bullet {
-	background: #9acd32; /* 色：緑 */
-    opacity: 0.5; /* 半透明（デフォルトでは0.2） */
+	background: #9acd32;
+    opacity: 0.5;
     margin-right: 7px;
     margin-right: calcVw(7);
 
@@ -40,6 +40,6 @@ $block: mainVisual;
 
 /* 現在のスライドのスタイル */
 .swiper-pagination-bullet-active {
-	background: #ffd700; /* 色：黄色 */
-	opacity: 1; /* 不透明 */
+	background: #ffd700;
+	opacity: 1;
 }

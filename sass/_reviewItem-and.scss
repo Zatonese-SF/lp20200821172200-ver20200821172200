@@ -1,39 +1,61 @@
 $block: reviewItem-and;
 
 .#{$block} {
-    border-top: 1px solid #aaa;
-    border-bottom: 1px solid #aaa;
-    @include prtyVwPx(padding, 15, 0, 20);
-    @include prtyVwPx(margin-bottom, 50);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    @include fs($fsDFS);
+    letter-spacing: $ls1S;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 12px;
+    padding: calcVw(12);
+    height: 170px;
+    height: calcVw(170);
+
+
+    // border-top: 1px solid #aaa;
+    // border-bottom: 1px solid #aaa;
+    // padding: 15px 0 20px;
+    // padding: calcVw(15) 0 calcVw(20);
+    // margin-bottom: 50px;
+    // margin-bottom: calcVw(50);
 
 
 
-    &__header {
-        @include fs($fsDFL);
-        font-weight: bold;
-        @include prtyVwPx(margin-bottom, 20);
-    }
+    // &__header {
+    //     @include fs($fsDFL);
+    //     font-weight: bold;
+    //     letter-spacing: $ls1S;
+    //     margin-bottom: 20px;
+    //     margin-bottom: calcVw(20);
+    // }
 
 
 
-    &__item {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        align-content: flex-start;
-        @include fs($fsDFS);
-        background-color: #f7f7f7;
-        box-sizing: border-box;
-        border-radius: 5px;
-        @include prtyVwPx(padding, 12);
-        height: calcVw(170);
-    }
+    // &__item {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     align-items: flex-start;
+    //     align-content: flex-start;
+    //     @include fs($fsDFS);
+    //     background-color: #f7f7f7;
+    //     box-sizing: border-box;
+    //     border-radius: 5px;
+    //     padding: 12px;
+    //     padding: calcVw(12);
+    //     height: 170px;
+    //     height: calcVw(170);
+    // }
 
 
 
     &__user {
         color: #222222;
         width: 100%;
+        margin-bottom: 10px;
         margin-bottom: calcVw(10);
     }
 
@@ -42,13 +64,14 @@ $block: reviewItem-and;
     &__rate {
         display: block;
         position: relative;
-        color: #cccccc;
+        color: $scAnd;
+        margin-bottom: 6px;
         margin-right: calcVw(6);
 
 
 
         &::before {
-            content: '★★★★★';
+            content: '☆☆☆☆☆';
         }
 
 
@@ -56,7 +79,6 @@ $block: reviewItem-and;
         &::after {
             content: '★★★★★';
             overflow: hidden;
-            color: $scAnd;
             position: absolute;
             top: 0;
             left: 0;
@@ -89,6 +111,7 @@ $block: reviewItem-and;
     &__detail {
         line-height: 1.5;
         color: #555555;
-        @include prtyVwPx(margin-top, 10);
+        margin-top: 10px;
+        margin-top: calcVw(10);
     }
 }

@@ -7,10 +7,12 @@ $block: reviewItem-ios;
         align-items: flex-start;
         align-content: flex-start;
         @include fs($fsDFS);
+        letter-spacing: $ls1S;
         background-color: #F2F2F6;
         box-sizing: border-box;
         border-radius: 5px;
-        @include prtyVwPx(padding, 12);
+        padding: 12px;
+        padding: calcVw(12);
         height: calcVw(170);
         position: relative;
         
@@ -18,7 +20,8 @@ $block: reviewItem-ios;
 
     &__title {
         font-weight: bold;
-        @include prtyVwPx(margin-bottom, 6);
+        margin-bottom: 6px;
+        margin-bottom: calcVw(6);
     }
 
 
@@ -69,7 +72,8 @@ $block: reviewItem-ios;
     &__date {
         text-align: right;
         color: $fc02;
-        @include prtyVwPx(margin-bottom, 6);
+        margin-bottom: 6px;
+        margin-bottom: calcVw(6);
     }
 
 
@@ -83,6 +87,7 @@ $block: reviewItem-ios;
 
     &__detail {
         line-height: 1.5;
-        @include prtyVwPx(margin-top, 15);
+        margin-top: 15px;
+        margin-top: calcVw(15);
     }
 }

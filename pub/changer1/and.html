@@ -21,6 +21,7 @@
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
         <script>
+
             (function(d) {
               var config = {
                 kitId: 'qhu8bit',
@@ -29,7 +30,8 @@
               },
               h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
             })(document);
-        </script>
+
+          </script>
 
     </head>
 
@@ -37,17 +39,15 @@
 
         <div class="topContents">
 
-            <header class="siteHeader">
+            <header id="siteHeader" class="siteHeader">
 
-                <h1 class="siteHeader__siteTitle">オフパコ&#0183;ソーシャル&#0183;ネットワーク</h1>
-
-                <p class="siteHeader__r18"><img src="../img/r18.png" alt="18禁"></p>
+                <h1 class="siteHeader__siteTitle"><img src="../img/logo.svg" alt="オフパコ&#0183;ソーシャル&#0183;ネットワーク"></h1>
                 
             </header>
 
 
 
-            <div class="appInfoSub">
+            <div id="appInfoSub" class="appInfoSub">
 
                 <div class="appInfoSub__infoText">
 
@@ -74,140 +74,147 @@
             <h1>News</h1>
 
            <dl>
-               <dt>2020/08/26</dt>
-               <dd>【注意】アダルト要素が強すぎる為&#xFF64;ストアから削除される可能性があります&#x3002;早めのインストールをお願いします&#x3002;</dd>
+               <dt><?php echo date('Y/m/d', strtotime("0 days")); ?></dt>
+               <dd>【注意】アダルト要素が強すぎる為&#xFF64;ストアから削除される可能性があります&#x3002;早めにインストールをお願いします&#x3002;</dd>
            </dl>
 
         </section>
 
 
 
-        <div id="mainVisual" class="mainVisual">
+        <main>
 
-            <div class="swiper-container slider1">
+            <div id="mainVisual" class="mainVisual">
 
-                <ul class="swiper-wrapper">
+                <div class="swiper-container slider1">
 
-                    <li  class="swiper-slide"><img src="../img/mv_sample.png"></li>
-                    <li class="swiper-slide"><img src="../img/mv_sample-02.png"></li>
-                    <li class="swiper-slide"><img src="../img/mv_sample-03.png"></li>
-                    <li class="swiper-slide"><img src="../img/mv_sample-04.png"></li>
-                    <li class="swiper-slide"><img src="../img/mv_sample-05.png"></li>
+                    <ul class="swiper-wrapper">
 
-                </ul>                
+                        <li class="swiper-slide"><img src="../img/mv_sample.png"></li>
+                        <li class="swiper-slide"><img src="../img/mv_sample-02.png"></li>
+                        <li class="swiper-slide"><img src="../img/mv_sample-03.png"></li>
+                        <li class="swiper-slide"><img src="../img/mv_sample-04.png"></li>
+                        <li class="swiper-slide"><img src="../img/mv_sample-05.png"></li>
+
+                    </ul>                
+                    
+                </div>
+
+                <div class="swiper-pagination"></div>
                 
             </div>
 
-            <div class="swiper-pagination"></div>
+
+
+            <ul class="tag">
+
+                <li class="tag__listWrap">
+                    <ul id="tagList01" class="tag__list"></ul>
+                </li>
+                    
+                <li class="tag__listWrap">
+                    <ul id="tagList02" class="tag__list"></ul>
+                </li>
+                    
+                <li class="tag__listWrap">
+                    <ul id="tagList03" class="tag__list"></ul>
+                </li>
+
+            </ul>
             
-        </div>
 
 
+            <div class="thumbnail thumbnail--main">
 
-        <ul class="tag">
-
-            <li class="tag__listWrap">
-                <ul id="tagList01" class="tag__list"></ul>
-            </li>
-                
-            <li class="tag__listWrap">
-                <ul id="tagList02" class="tag__list"></ul>
-            </li>
-                
-            <li class="tag__listWrap">
-                <ul id="tagList03" class="tag__list"></ul>
-            </li>
-
-        </ul>
-        
-
-
-        <div class="thumbnail">
-
-            <ul id="thumbnailList" class="thumbnail__list"></ul>
-
-        </div>
-
-
-
-        <section class="appInfo">
-
-            <div class="appInfo__basic">
-
-                <h1 class="appInfo__name"><?php echo(IOS_NAME01); ?></h1>
-
-                <img class="appInfo__icon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
-
-                <p class="appInfo__copy">テキストテキスト<br>テキストテキストテキスト</p>
-
-                <p class="appInfo__sub">オフパコ&#0183;ソーシャル&#0183;ネットワーク</p>
-
-                <a class="appInfo__dlBtn" href="<?php echo($send_url); ?>" alt="Aoo Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
+                <ul id="mainThumbnailList" class="thumbnailList thumbnail__list"></ul>
 
             </div>
 
 
-            <section class="review">
 
-                <h1 class="review__header">評価とレビュー</h1>
+            <section class="appInfo">
 
-                <div class="swiper-container slider2">
-    
-                    <ul id="reviewList" class="review__itemList swiper-wrapper"></ul>
+                <div class="appInfo__basic">
+
+                    <h1 class="appInfo__name"><?php echo(IOS_NAME01); ?></h1>
+
+                    <img class="appInfo__icon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
+
+                    <p class="appInfo__copy">超最新版&#33;&#33;<br>オフパコ&#0183;マッチングアプリ&#33;&#33;</p>
+
+                    <p class="appInfo__sub">オフパコ&#0183;マッチング</p>
+
+                    <a class="appInfo__dlBtn" href="<?php echo($send_url); ?>" alt="Aoo Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
 
                 </div>
-    
+
+
+                <section class="review">
+
+                    <h1 class="review__header">評価とレビュー</h1>
+
+                    <div class="swiper-container slider2">
+        
+                        <ul id="reviewList" class="review__itemList swiper-wrapper"></ul>
+
+                    </div>
+        
+                </section>
+
+
+                
+                <dl class="appInfo__caution">
+
+                    <dt>&#x203B;注意</dt>
+                    <dd>App Storeでは&#xFF64;基本的にアダルト要素の強いアプリは禁止とされている為&#xFF64;いきなりストアから削除される可能性も考えられます&#x3002;ダウンロードは&#xFF64;すぐにできるのでストアから削除される事態が起こる前に早めにインストールすることを強くオススメします&#x3002;</dd>
+
+                </dl>
+
             </section>
 
 
+
             
-            <dl class="appInfo__caution">
 
-                <dt>&#x203B;注意</dt>
-                <dd>App StoreとGoogle Playでは&#xFF64;基本的にアダルト要素の強いアプリは禁止とされている為&#xFF64;いきなりストアから削除される可能性も考えられます&#x3002;ダウンロードは&#xFF64;すぐにできるのでストアから削除される事態が起こる前に早めにインストールすることを強くオススメします&#x3002;</dd>
+            <div class="thumbnail">
 
-            </dl>
-
-        </section>
-
-
-
-        <ul>
-            <li></li>
-            <li></li>
-        </ul>
-
-
-
-
-
-        <div id="mask" class="mask"></div>
-
-        <div id="modal" class="modal">
-
-            <div id="modalVisual" class="modal__visual">
-                <p>サンプルサンプルサンプルサンプル</p>
-            </div>
-
-
-
-            <div class="modal_appInfo">
-                
-                <img class="modal__appIcon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
-
-                <p class="modal__appName"><?php echo(IOS_NAME01); ?></p>
-
-                <p class="modal__appSub">オフパコ&#0183;ソーシャル&#0183;ネットワーク</p>
-
-                <a class="modal__appDlBtn" href="<?php echo($send_url); ?>" alt="Aoo Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
+                <ul id="pickupThumbnailList" class="thumbnailList thumbnail__list"></ul>
 
             </div>
 
-            <div id="modalClose" class="modal__close"><img src="../img/close.svg" alt="閉じる"></div>
-
-        </div>
 
 
+
+
+            <div id="mask" class="mask"></div>
+
+            <div id="modal" class="modal">
+
+                <div id="modalVisual" class="modal__visual">
+
+                    <p class="modal__text"><span class="modal__text01">エロ可愛い娘ちゃん達が待ってます</span><span class="modal__text03">無料ですぐにダウンロードできます</span><span class="modal__text03">是非オフパコをお楽しみ下さい</span></p>
+
+                </div>
+
+
+
+                <div class="modal_appInfo">
+                    
+                    <img class="modal__appIcon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
+
+                    <p class="modal__appName"><?php echo(IOS_NAME01); ?></p>
+
+                    <p class="modal__appSub">オフパコ&#0183;ソーシャル&#0183;ネットワーク</p>
+
+                    <a class="modal__appDlBtn" href="<?php echo($send_url); ?>" alt="Aoo Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
+
+                </div>
+
+                <div id="modalClose" class="modal__close"><img src="../img/close.svg" alt="閉じる"></div>
+
+            </div>
+
+        </main>
 
 
 
@@ -219,7 +226,7 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
         <script src="../js/main.js"></script>
-        <script src="../js/ios.js"></script>
+        <script src="../js/and.js"></script>
         
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="../js/swiper_org.js"></script>

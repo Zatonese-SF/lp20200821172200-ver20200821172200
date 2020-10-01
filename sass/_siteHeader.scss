@@ -4,7 +4,9 @@ $block: siteHeader;
     order: 2;
     
     &__siteTitle {
+        width: 330px;
         width: calcVw(330);
+        padding: 12px 0;
         padding: calcVw(12) 0;
         margin: 0 auto; 
 

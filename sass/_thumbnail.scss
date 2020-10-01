@@ -58,7 +58,6 @@ $block: thumbnail;
         position: absolute;
         top: 0;
         left: 0;
-        // z-index: -1;
     }
 
 
@@ -74,6 +73,7 @@ $block: thumbnail;
 
         li {
             margin-right: 3px;
+            margin-right: calcVw(3);
         }
     }
 
@@ -83,7 +83,7 @@ $block: thumbnail;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        letter-spacing: .05em;
+        letter-spacing: $ls2S;
         position: absolute;
         bottom: 5px;
         bottom: calcVw(5);
@@ -96,6 +96,7 @@ $block: thumbnail;
     &__title {
         @include fs($fs1S);
         font-weight: bold;
+        letter-spacing: $ls1S;
         text-shadow: 1px 1px 3px #000000aa;
         width: 100%;
         margin-bottom: 4px;
@@ -106,6 +107,7 @@ $block: thumbnail;
 
     &__user {
         @include fs($fs1SS);
+        letter-spacing: $ls1S;
         text-shadow: 1px 1px 3px #000000aa;
         margin-right: 10px;
         margin-right: calcVw(10);
@@ -117,9 +119,11 @@ $block: thumbnail;
         display: flex;
         align-items: center;
         @include fs($fs1SS);
+        letter-spacing: $lsDF;
         border-radius: 15px;
         background-color: rgba(0, 0, 0, 0.5);
-        padding: .4em 1.1em .4em .9em;
+        padding: 4px 10px;
+        padding: calcVw(4) calcVw(10);
     }
 
 
@@ -127,7 +131,8 @@ $block: thumbnail;
     &__splash {
         background: url(../img/splash.png) no-repeat left center/auto 100%;
         padding-left: 1.5em;
-        margin-right: .5em;
+        margin-right: 5px;
+        margin-right: calcVw(5);
     }
 
 
@@ -140,6 +145,7 @@ $block: thumbnail;
 
 
     &__label-live {
+        width: 40px;
         width: calcVw(40);
 
         img {
@@ -150,6 +156,7 @@ $block: thumbnail;
 
 
     &__label-limited {
+        width: 40px;
         width: calcVw(40);
 
         img {
@@ -160,6 +167,7 @@ $block: thumbnail;
 
 
     &__label-tits {
+        width: 37px;
         width: calcVw(37);
 
         img {
@@ -170,6 +178,7 @@ $block: thumbnail;
 
 
     &__label-mark {
+        width: 30px;
         width: calcVw(30);
 
         img {
