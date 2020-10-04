@@ -1,20 +1,20 @@
 $block: reviewItem-ios;
 
 .#{$block} {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        align-content: flex-start;
-        @include fs($fsDFS);
-        letter-spacing: $ls1S;
-        background-color: #F2F2F6;
-        box-sizing: border-box;
-        border-radius: 5px;
-        padding: 12px;
-        padding: calcVw(12);
-        height: calcVw(170);
-        position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    @include fs($fsDFS);
+    letter-spacing: $ls1S;
+    background-color: #F2F2F6;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 12px;
+    padding: calcVw(12);
+    height: calcVw(170);
+    position: relative;
         
 
 
@@ -33,36 +33,24 @@ $block: reviewItem-ios;
 
 
 
-        &::before,
-        &::after {
+        &::before {
+            content: '★★★★★';
+            overflow: hidden;
             position: absolute;
             top: 0;
         }
-        
-
-
-        &::before {
-            content: '☆☆☆☆☆';
-        }
 
 
 
-        &::after {
-            content: '★★★★★';
-            overflow: hidden;
-        }
-
-
-
-        &--4::after {
+        &--4::before {
             width: 80%;
         }
 
-        &--4_5::after {
+        &--4_5::before {
             width: 90%;
         }
 
-        &--5::after {
+        &--5::before {
             width: 100%;
         }
     }

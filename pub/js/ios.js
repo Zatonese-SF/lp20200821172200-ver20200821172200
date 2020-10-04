@@ -44,6 +44,7 @@
 
             const reviewRateElem = document.createElement('p');
             reviewRateElem.classList.add('reviewItem-ios__rate');
+            reviewRateElem.textContent = '☆☆☆☆☆';
             reviewTitleRateElem.appendChild(reviewRateElem);
 
             if(this.rate === 4) {
@@ -76,35 +77,51 @@
     const reviews = [
 
         new Review({
-            user: 'pooiu',
-            title: 'はじめるよ',
+            user: '変態紳士',
+            title: 'サンプル',
             date: getD(1),
             rate: 4.5,
-            detail: 'このアプリ最高すぎ！神アプリや〜',
+            detail: 'おい、これマジでスゴイぞ',
         }),
 
         new Review({
-            user: 'pooiu',
-            title: 'はじめるよ',
+            user: 'かんた',
+            title: 'サンプル',
             date: getD(1),
-            rate: 4,
-            detail: 'このアプリ最高すぎ！神アプリや〜',
+            rate: 5,
+            detail: 'オフパコまでのスピード感ハンパない',
         }),
 
         new Review({
-            user: 'pooiu',
-            title: 'はじめるよ',
+            user: '珍太郎',
+            title: 'サンプル',
             date: getD(2),
-            rate: 3,
-            detail: 'このアプリ最高すぎ！神アプリや〜',
+            rate: 4,
+            detail: `コロナ禍に俺は${t}に救われた`,
         }),
 
         new Review({
-            user: 'pooiu',
-            title: 'はじめるよ',
+            user: 'ジェファーソン',
+            title: 'サンプル',
             date: getD(3),
-            rate: 3,
-            detail: 'このアプリ最高すぎ！神アプリや〜',
+            rate: 5,
+            detail: `ん…確かに今ところ${t}一択かな`,
+        }),
+
+        new Review({
+            user: 'シコシコ番長',
+            title: 'サンプル',
+            date: getD(4),
+            rate: 4.5,
+            detail: 'コレ絶対いれとけ！損はない',
+        }),
+
+        new Review({
+            user: 'きよはら',
+            title: 'サンプル',
+            date: getD(4),
+            rate: 5,
+            detail: '自分の都合でオフパコできる',
         }),
     ]
 

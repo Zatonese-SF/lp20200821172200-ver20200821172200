@@ -54,7 +54,7 @@ $block: modal;
 
         span {
             display: block;
-            @include fs($fsDF);
+            @include fs($fsDFS);
             font-weight: bold;
             letter-spacing: $lsDF;
             background-color: rgba(255,255,255,0.8);

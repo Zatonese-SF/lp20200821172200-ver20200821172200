@@ -160,7 +160,7 @@
         
                 const thumbnailTitleElem = document.createElement('div');
                 thumbnailTitleElem.classList.add('thumbnail__title');
-                thumbnailTitleElem.textContent = this.title;
+                thumbnailTitleElem.innerHTML = this.title;
                 thumbnailInfoElem.appendChild(thumbnailTitleElem);
 
                 const thumbnailuserElem = document.createElement('div');
@@ -238,204 +238,247 @@
 
             new Post({
                 id: '01',
-                user: 'pooiu',
-                title: 'はじめるよ',
+                user: '愛香',
+                title: '限界に挑戦してみます&#x1f60a;&#x1f60a;',
                 thumbnailImg: '../img/r18.png',
-                label: [],
-                status: 'pickup',
+                label: [label.live, label.limited, label.tits, label.mark],
                 likeCount: 10000,
                 splashCount: 100,
             }),
     
             new Post({
                 id: '02',
-                user: 'tete',
-                title: 'かかこあお',
-                thumbnailImg: 'https://pocketmonster-gogo.com/video/letsoffpaco/video01.mp4',
-                label: [label.live, label.limited, label.tits, label.mark],
+                user: 'AINA',
+                title: '思いっきり挿れてみたい',
+                thumbnailImg: '../img/r18.png',
+                label: [],
                 likeCount: 10000,
                 splashCount: 100,
             }),
 
             new Post({
                 id: '03',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.mark],
+                user: 'アサリ',
+                title: '溜まってます…オフパコしないなぁ…',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '04',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: '明日香',
+                title: '潮吹き見てください',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
+
 
             new Post({
                 id: '05',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: '伊代',
+                title: '一緒に気持ち良くなりたいです',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '06',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: 'カンナ',
+                title: '誰かちょっとだけ見てくれませんか?',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '07',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: '小梅',
+                title: '乳首イジってください',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '08',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: 'JULIA',
+                title: 'とにかく会ってエッチなことしたですー',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '09',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: 'とこも',
+                title: 'セフレ探してます',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '10',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: 'ナミ',
+                title: '潮吹いたことないです…吹かせて下さい。',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '11',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: 'ふーちん',
+                title: 'オフパコ希望',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '12',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: 'フミ',
+                title: 'フェラさせてー',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '13',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
+                user: 'MARI',
+                title: '初心者です。ヨロシクです',
+                thumbnailImg: '../img/r18.png',
+                label: [],
                 likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
-                thumbnailImg: 'https://pocketmonster-gogo.com/video/letsoffpaco/video01.mp4',
+                splashCount: 100,
             }),
 
             new Post({
                 id: '14',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: 'ミッキー',
+                title: 'オマ●コおっぴろげまーす',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '15',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: '萌',
+                title: 'エッチ教えて下さい',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '16',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: 'ももか',
+                title: 'オフパコやりましょー',
                 thumbnailImg: '../img/r18.png',
-                status: 'pickup',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '17',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: '弥生',
+                title: 'ア〜ン…イク〜',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '18',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: '優梨',
+                title: '即オフパコヤりたいです…',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '19',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.tits, label.live, label.limit],
+                user: 'らら',
+                title: 'わたしのオッパイすっごいですよ(笑)',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
             }),
 
             new Post({
                 id: '20',
-                user: 'tete',
-                title: 'かかこあお',
-                splashCount: 100,
-                likeCount: 10000,
-                label: [label.mark],
+                user: 'リリ',
+                title: '舐めたいなぁ…',
                 thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
+            }),
+
+            new Post({
+                id: '21',
+                user: '和香',
+                title: 'オフパコ オフパコ オフパコ',
+                thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
+                status: 'pickup',
+            }),
+
+            new Post({
+                id: '22',
+                user: 'カレン',
+                title: 'お相手してくださーい',
+                thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
+                status: 'pickup',
+            }),
+
+            new Post({
+                id: '23',
+                user: 'NANA',
+                title: 'おまんこ見てください',
+                thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
+                status: 'pickup',
+            }),
+
+            new Post({
+                id: '24',
+                user: 'はな',
+                title: 'チンポ大好き',
+                thumbnailImg: '../img/r18.png',
+                label: [],
+                likeCount: 10000,
+                splashCount: 100,
+                status: 'pickup',
             }),
         ];
 
@@ -448,23 +491,17 @@
             
             if(item.status === 'pickup') {
                 pickupThumbnails.push(item);
-                console.log(item.status);
             } else {
                 mainThumbnails.push(item);
-                console.log(item.status);
             }
         });
-
-        // console.log(mainThumbnails);
-        // console.log(pickupThumbnails);
         
 
 
         const mainThumbnailsShuffle = shuffle([...mainThumbnails]);
         const pickupThumbnailsShuffle = shuffle([...pickupThumbnails]);
 
-        // console.log(mainThumbnailsShuffle);
-        // console.log(pickupThumbnailsShuffle);
+        
 
         for(let i = 0; i <= 9; i++) {
             

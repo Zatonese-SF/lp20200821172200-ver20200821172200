@@ -71,6 +71,8 @@ $block: thumbnail;
         left: 7px;
         left: calcVw(7);
 
+
+
         li {
             margin-right: 3px;
             margin-right: calcVw(3);
@@ -84,6 +86,7 @@ $block: thumbnail;
         flex-wrap: wrap;
         align-items: center;
         letter-spacing: $ls2S;
+        width: 100%;
         position: absolute;
         bottom: 5px;
         bottom: calcVw(5);
@@ -92,17 +95,21 @@ $block: thumbnail;
     }
 
 
-
+    
     &__title {
+        overflow: hidden;
         @include fs($fs1S);
         font-weight: bold;
         letter-spacing: $ls1S;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        line-height: 1.4;
         text-shadow: 1px 1px 3px #000000aa;
         width: 100%;
         margin-bottom: 4px;
         margin-bottom: calcVw(4);
     }
-
+    
 
 
     &__user {

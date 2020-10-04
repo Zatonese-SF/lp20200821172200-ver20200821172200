@@ -531,6 +531,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.06em;
+  width: 100%;
   position: absolute;
   bottom: 5px;
   bottom: 1.33333vw;
@@ -539,10 +540,14 @@ body {
 }
 
 .thumbnail__title {
+  overflow: hidden;
   font-size: 1.2rem;
   font-size: 3.2vw;
   font-weight: bold;
   letter-spacing: 0.08em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.4;
   text-shadow: 1px 1px 3px #000000aa;
   width: 100%;
   margin-bottom: 4px;
@@ -783,29 +788,22 @@ body {
   color: #EE8834;
 }
 
-.reviewItem-ios__rate::before, .reviewItem-ios__rate::after {
+.reviewItem-ios__rate::before {
+  content: '★★★★★';
+  overflow: hidden;
   position: absolute;
   top: 0;
 }
 
-.reviewItem-ios__rate::before {
-  content: '☆☆☆☆☆';
-}
-
-.reviewItem-ios__rate::after {
-  content: '★★★★★';
-  overflow: hidden;
-}
-
-.reviewItem-ios__rate--4::after {
+.reviewItem-ios__rate--4::before {
   width: 80%;
 }
 
-.reviewItem-ios__rate--4_5::after {
+.reviewItem-ios__rate--4_5::before {
   width: 90%;
 }
 
-.reviewItem-ios__rate--5::after {
+.reviewItem-ios__rate--5::before {
   width: 100%;
 }
 
@@ -952,8 +950,8 @@ body {
 
 .modal__text span {
   display: block;
-  font-size: 1.6rem;
-  font-size: 4.26667vw;
+  font-size: 1.4rem;
+  font-size: 3.73333vw;
   font-weight: bold;
   letter-spacing: 0.1em;
   background-color: rgba(255, 255, 255, 0.8);

@@ -2,6 +2,16 @@
 
 {
 
+    const getD = (i) => {
+        const d = new Date();
+        d.setDate(d.getDate() - i);
+        return `${d.getMonth() + 1}月${d.getDate()}日`;
+    };
+
+
+
+
+
     class Review {
 
         constructor({user, date, rate, detail}) {
@@ -12,7 +22,6 @@
             this.rate = rate;
             this.detail = detail;
             
-
             const reviewListElem = document.getElementById('reviewList');
 
             const reviewItemElem = document.createElement('li');
