@@ -1,57 +1,22 @@
 $block: reviewItem-and;
 
 .#{$block} {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    @include fs($fsDFS);
-    letter-spacing: $ls1S;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: flex-start;
+    // align-content: flex-start;
+    // @include fs($fsDFS);
+    // letter-spacing: $ls1S;
     background-color: #f7f7f7;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 12px;
-    padding: calcVw(12);
-    height: 170px;
-    height: calcVw(170);
+    // box-sizing: border-box;
+    // border-radius: 5px;
+    // padding: 12px;
+    // padding: calcVw(12);
+    // height: 170px;
+    // height: calcVw(170);
 
 
-    // border-top: 1px solid #aaa;
-    // border-bottom: 1px solid #aaa;
-    // padding: 15px 0 20px;
-    // padding: calcVw(15) 0 calcVw(20);
-    // margin-bottom: 50px;
-    // margin-bottom: calcVw(50);
-
-
-
-    // &__header {
-    //     @include fs($fsDFL);
-    //     font-weight: bold;
-    //     letter-spacing: $ls1S;
-    //     margin-bottom: 20px;
-    //     margin-bottom: calcVw(20);
-    // }
-
-
-
-    // &__item {
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     align-items: flex-start;
-    //     align-content: flex-start;
-    //     @include fs($fsDFS);
-    //     background-color: #f7f7f7;
-    //     box-sizing: border-box;
-    //     border-radius: 5px;
-    //     padding: 12px;
-    //     padding: calcVw(12);
-    //     height: 170px;
-    //     height: calcVw(170);
-    // }
-
-
-
+    
     &__user {
         color: #222222;
         width: 100%;

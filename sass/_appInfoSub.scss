@@ -1,16 +1,34 @@
 $block: appInfoSub;
 
 .#{$block} {
-    display: flex;
-    order: 1;
-    width: 100%;
-    background-color: #F2F2F7;
-    box-sizing: border-box;
-    border-bottom: 1px solid #BDBDC3;
-    padding: 12px 15px 12px 20px;
-    padding: calcVw(12) calcVw(15) calcVw(12) calcVw(20);
-    position: fixed;
-    z-index: 1;
+    @at-root {
+
+        %appInfoSub {
+            display: flex;
+            order: 1;
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 1px solid #BDBDC3;
+            padding: 12px 15px 12px 20px;
+            padding: calcVw(12) calcVw(15) calcVw(12) calcVw(20);
+            position: fixed;
+            z-index: 1;
+        }
+    }
+
+
+
+    &--ios {
+        @extend %appInfoSub;
+        background-color: #F2F2F7;
+    }
+
+
+
+    &--and {
+        @extend %appInfoSub;
+        background-color: #f7f7f7;
+    }
 
 
 
@@ -66,12 +84,29 @@ $block: appInfoSub;
 
 
     &__dl {
-        @include fs($fsDF);
-        letter-spacing: $ls3S;
-        text-decoration: none;
-        color: $fsLink;
-        order: 3;
-        align-self: center;
-        margin-left: auto;
+
+        @at-root {
+
+            %dl{
+                @include fs($fsDF);
+                letter-spacing: $ls3S;
+                text-decoration: none;
+                order: 3;
+                align-self: center;
+                margin-left: auto;
+            }
+        }
+
+
+
+        &--ios {
+            @extend %dl;
+            color: #4E90F5;
+        }
+
+        &--and {
+            @extend %dl;
+            color: $scAnd;
+        }
     }
 }

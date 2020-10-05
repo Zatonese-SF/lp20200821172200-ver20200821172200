@@ -239,7 +239,7 @@
             new Post({
                 id: '01',
                 user: '愛香',
-                title: '限界に挑戦してみます&#x1f60a;&#x1f60a;',
+                title: '限界に挑戦してみます&#x1f618;',
                 thumbnailImg: '../img/r18.png',
                 label: [label.live, label.limited, label.tits, label.mark],
                 likeCount: 10000,
@@ -249,7 +249,7 @@
             new Post({
                 id: '02',
                 user: 'AINA',
-                title: '思いっきり挿れてみたい',
+                title: '思いっきり挿れてみたい&#x1f446;&#x1f49e;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -269,7 +269,7 @@
             new Post({
                 id: '04',
                 user: '明日香',
-                title: '潮吹き見てください',
+                title: '潮吹き見てください&#x1f4a6;&#x1f4a6;&#x1f4a6;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -290,7 +290,7 @@
             new Post({
                 id: '06',
                 user: 'カンナ',
-                title: '誰かちょっとだけ見てくれませんか?',
+                title: '誰か見てくれませんか&#x2753;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -300,7 +300,7 @@
             new Post({
                 id: '07',
                 user: '小梅',
-                title: '乳首イジってください',
+                title: '乳首イジってください&#x1f495;&#x1f495;&#x1f495;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -320,7 +320,7 @@
             new Post({
                 id: '09',
                 user: 'とこも',
-                title: 'セフレ探してます',
+                title: 'セフレ探してます&#x1f48c;&#x1f48b;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -340,7 +340,7 @@
             new Post({
                 id: '11',
                 user: 'ふーちん',
-                title: 'オフパコ希望',
+                title: 'オフパコ希望&#x1f493;&#x1f493;&#x1f493;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -350,7 +350,7 @@
             new Post({
                 id: '12',
                 user: 'フミ',
-                title: 'フェラさせてー',
+                title: 'フェラさせてー&#x1f445;&#x1f445;&#x1f445;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -360,7 +360,7 @@
             new Post({
                 id: '13',
                 user: 'MARI',
-                title: '初心者です。ヨロシクです',
+                title: '初心者です&#x2757;&#x2757;ヨロシクです',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -370,7 +370,7 @@
             new Post({
                 id: '14',
                 user: 'ミッキー',
-                title: 'オマ●コおっぴろげまーす',
+                title: 'オマ●コおっぴろげまーす&#x1f61d;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -380,7 +380,7 @@
             new Post({
                 id: '15',
                 user: '萌',
-                title: 'エッチ教えて下さい',
+                title: 'エッチ教えて下さい&#x1f60a;&#x1f497;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -390,7 +390,7 @@
             new Post({
                 id: '16',
                 user: 'ももか',
-                title: 'オフパコやりましょー',
+                title: 'オフパコやりましょー&#x2757;&#x2757;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -400,7 +400,7 @@
             new Post({
                 id: '17',
                 user: '弥生',
-                title: 'ア〜ン…イク〜',
+                title: 'ア〜ン…イク〜&#x1f92a;&#x1f496;&#x1f4a6;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -410,7 +410,7 @@
             new Post({
                 id: '18',
                 user: '優梨',
-                title: '即オフパコヤりたいです…',
+                title: '即オフパコヤりたいです&#x1f496;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -430,7 +430,7 @@
             new Post({
                 id: '20',
                 user: 'リリ',
-                title: '舐めたいなぁ…',
+                title: '舐めたいなぁ…&#x1f445;&#x1f48b;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -440,7 +440,7 @@
             new Post({
                 id: '21',
                 user: '和香',
-                title: 'オフパコ オフパコ オフパコ',
+                title: 'オフパコ&#x1f493;オフパコ&#x1f493;オフパコ&#x1f493;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -451,7 +451,7 @@
             new Post({
                 id: '22',
                 user: 'カレン',
-                title: 'お相手してくださーい',
+                title: 'お相手してくださーい&#x1f63a;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -462,7 +462,7 @@
             new Post({
                 id: '23',
                 user: 'NANA',
-                title: 'おまんこ見てください',
+                title: 'おまんこ見てください&#x2757;&#x2757;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,
@@ -473,7 +473,7 @@
             new Post({
                 id: '24',
                 user: 'はな',
-                title: 'チンポ大好き',
+                title: 'チンポ大好き&#x1f493;&#x1f44d;&#x1f61c;',
                 thumbnailImg: '../img/r18.png',
                 label: [],
                 likeCount: 10000,

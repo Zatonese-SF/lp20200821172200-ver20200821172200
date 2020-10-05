@@ -31,6 +31,8 @@
               h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
             })(document);
 
+            const an = '<?php echo(AND_NAME01); ?>';
+
           </script>
 
     </head>
@@ -47,21 +49,21 @@
 
 
 
-            <div id="appInfoSub" class="appInfoSub">
+            <div id="appInfoSub" class="appInfoSub--and">
 
                 <div class="appInfoSub__infoText">
 
-                    <p class="appInfoSub__name"><?php echo(IOS_NAME01); ?></p>
+                    <p class="appInfoSub__name"><?php echo(AND_NAME01); ?></p>
                     
                     <p class="appInfoSub__sub">オフパコ&#0183;マッチング</p>
                     
-                    <p class="appInfoSub__store">App Store</p>
+                    <p class="appInfoSub__store">Google Play</p>
 
                 </div>
 
-                <img class="appInfoSub__icon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
+                <img class="appInfoSub__icon" src="//pocketmonster-gogo.com/appicon/and/<?php echo($andapp); ?>/img/icon_ad.png" alt="アプリの画像">
 
-                <a class="appInfoSub__dl" href="<?php echo($send_url); ?>">ダウンロード</a>
+                <a class="appInfoSub__dl--and" href="<?php echo($send_url); ?>">ダウンロード</a>
 
             </div>  
 
@@ -136,15 +138,15 @@
 
                 <div class="appInfo__basic">
 
-                    <h1 class="appInfo__name"><?php echo(IOS_NAME01); ?></h1>
+                    <h1 class="appInfo__name"><?php echo(AND_NAME01); ?></h1>
 
-                    <img class="appInfo__icon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
+                    <img class="appInfo__icon" src="//pocketmonster-gogo.com/appicon/and/<?php echo($andapp); ?>/img/icon_ad.png" alt="<?php echo(AND_NAME01); ?>のアプリアイコン画像">
 
                     <p class="appInfo__copy">超最新版&#33;&#33;<br>オフパコ&#0183;マッチングアプリ&#33;&#33;</p>
 
                     <p class="appInfo__sub">オフパコ&#0183;マッチング</p>
 
-                    <a class="appInfo__dlBtn" href="<?php echo($send_url); ?>" alt="Aoo Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
+                    <a class="appInfo__dlBtn" href="<?php echo($send_url); ?>" alt="Google Playからダウンロード"><img src="../img/btn-and.png"></a>
 
                 </div>
 
@@ -166,7 +168,7 @@
                 <dl class="appInfo__caution">
 
                     <dt>&#x203B;注意</dt>
-                    <dd>App Storeでは&#xFF64;基本的にアダルト要素の強いアプリは禁止とされている為&#xFF64;いきなりストアから削除される可能性も考えられます&#x3002;ダウンロードは&#xFF64;すぐにできるのでストアから削除される事態が起こる前に早めにインストールすることを強くオススメします&#x3002;</dd>
+                    <dd>Google Playでは&#xFF64;基本的にアダルト要素の強いアプリは禁止とされている為&#xFF64;いきなりストアから削除される可能性も考えられます&#x3002;ダウンロードは&#xFF64;すぐにできるのでストアから削除される事態が起こる前に早めにインストールすることを強くオススメします&#x3002;</dd>
 
                 </dl>
 
@@ -192,7 +194,7 @@
 
                 <div id="modalVisual" class="modal__visual">
 
-                    <p class="modal__text"><span class="modal__text01">エロ可愛い娘ちゃん達が待ってます</span><span class="modal__text03">無料ですぐにダウンロードできます</span><span class="modal__text03">是非オフパコをお楽しみ下さい</span></p>
+                    <p class="modal__text"><span class="modal__text01">エロ可愛い娘ちゃん達が待ってます&#33;</span><span class="modal__text03">無料ですぐにダウンロードできます&#33;</span><span class="modal__text03">是非&#12289;オフパコをお楽しみ下さい&#33;&#33;</span></p>
 
                 </div>
 
@@ -200,13 +202,13 @@
 
                 <div class="modal_appInfo">
                     
-                    <img class="modal__appIcon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
+                    <img class="modal__appIcon" src="//pocketmonster-gogo.com/appicon/and/<?php echo($andapp); ?>/img/icon_ad.png" alt="<?php echo(AND_NAME01); ?>のアプリアイコン画像">
 
-                    <p class="modal__appName"><?php echo(IOS_NAME01); ?></p>
+                    <p class="modal__appName"><?php echo(AND_NAME01); ?></p>
 
-                    <p class="modal__appSub">オフパコ&#0183;ソーシャル&#0183;ネットワーク</p>
+                    <p class="modal__appSub">オフパコ&#0183;マッチング</p>
 
-                    <a class="modal__appDlBtn" href="<?php echo($send_url); ?>" alt="Aoo Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
+                    <a class="modal__appDlBtn" href="<?php echo($send_url); ?>" alt="Google Playからダウンロード"><img src="../img/btn-and.png" alt="ダウンロード"></a>
 
                 </div>
 

@@ -1,0 +1,287 @@
+$block: reviewItem;
+
+.#{$block} {
+
+    @at-root {
+
+        %#{$block} {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+            @include fs($fsDFS);
+            letter-spacing: $ls1S;
+            box-sizing: border-box;
+            border-radius: 5px;
+            padding: 12px;
+            padding: calcVw(12);
+            height: 170px;
+            height: calcVw(170);
+        }
+    }
+
+
+
+    &--ios {
+        @extend %#{$block};
+        justify-content: space-between;
+        background-color: #F2F2F6;
+        position: relative;
+    }
+
+
+
+    &--and {
+        @extend %#{$block};
+        background-color: #f7f7f7;
+    }
+
+
+
+
+
+    &__user {
+
+        &--ios {
+            text-align: right;
+            color: $fc02;
+        }
+
+
+
+        &--and {
+            color: #222222;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-bottom: calcVw(10);
+        }
+    }
+        
+
+
+
+
+    &__title {
+        font-weight: bold;
+        margin-bottom: 6px;
+        margin-bottom: calcVw(6);
+    }
+
+
+
+
+
+    &__date {
+
+        @at-root {
+
+            %date {
+                text-align: right;
+                color: $fc02;
+            }
+        }
+
+
+
+        &--ios {
+            @extend %date;
+            margin-bottom: 6px;
+            margin-bottom: calcVw(6);
+        }
+
+
+
+        &--and {
+            @extend %date;
+        }
+    }
+
+
+
+
+
+    &__detail {
+
+        @at-root {
+
+            %detail {
+                line-height: 1.5;
+                width: 100%;
+            }
+        }
+
+
+
+        &--ios {
+            @extend %detail;
+            margin-top: 15px;
+            margin-top: calcVw(15);
+        }
+
+
+
+        &--and {
+            @extend %detail;
+            color: #555555;
+            margin-top: 10px;
+            margin-top: calcVw(10);
+        }
+    }
+
+
+
+
+
+    &__rate {
+        
+        @at-root {
+
+            %rate {
+                display: block;
+                position: relative;
+            }
+    
+    
+    
+            %star {
+                content: '★★★★★';
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+
+
+            %rate-ios {
+                color: #EE8834;
+            }
+
+
+
+            %rate-and {
+                color: $scAnd;
+                margin-bottom: 6px;
+                margin-right: calcVw(6);
+            }
+        }
+
+
+
+        &4 {
+            @at-root {
+
+                %rate4 {
+                    width: 80%;
+                }
+            }
+
+
+
+            &--ios {
+                @extend %rate;
+                @extend %rate-ios;
+                
+
+
+                &::before {
+                    @extend %star;
+                    @extend %rate4;
+                }
+            }
+
+
+            
+            &--and {
+                @extend %rate;
+                @extend %rate-and;
+
+
+
+                &::before {
+                    @extend %star;
+                    @extend %rate4;
+                }
+            }
+        }
+        
+        
+        
+        &4_5 {
+
+            @at-root {
+
+                %rate4_5 {
+                    width: 90%;
+                }
+            }
+
+
+
+            &--ios {
+                @extend %rate;
+                @extend %rate-ios;
+
+
+
+                &::before {
+                    @extend %star;
+                    @extend %rate4_5;
+                }
+            }
+
+
+            
+            &--and {
+                @extend %rate;
+                @extend %rate-and;
+
+
+
+                &::before {
+                    @extend %star;
+                    @extend %rate4_5;
+                }
+            }
+        }
+
+
+
+        &5 {
+            @at-root {
+
+                %rate5 {
+                    width: 100%;
+                }
+            }
+
+
+
+            &--ios {
+                @extend %rate;
+                @extend %rate5;
+                @extend %rate-ios;
+
+
+
+                &::before {
+                    @extend %star;
+                }
+            }
+
+
+            
+            &--and {
+                @extend %rate;
+                @extend %rate-and;
+
+
+
+                &::before {
+                    @extend %star;
+                    @extend %rate5;
+                }
+            }
+        }        
+    }
+}

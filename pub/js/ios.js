@@ -27,7 +27,7 @@
             const reviewListElem = document.getElementById('reviewList');
 
             const reviewItemElem = document.createElement('li');
-            reviewItemElem.classList.add('reviewItem-ios');
+            reviewItemElem.classList.add('reviewItem--ios');
             reviewItemElem.classList.add('swiper-slide');
             reviewListElem.appendChild(reviewItemElem);
 
@@ -38,35 +38,34 @@
             reviewItemElem.appendChild(reviewDateUserElem);
             
             const reviewTitleElem = document.createElement('h3');
-            reviewTitleElem.classList.add('reviewItem-ios__title');
+            reviewTitleElem.classList.add('reviewItem__title');
             reviewTitleElem.textContent = this.title;
             reviewTitleRateElem.appendChild(reviewTitleElem);
 
             const reviewRateElem = document.createElement('p');
-            reviewRateElem.classList.add('reviewItem-ios__rate');
             reviewRateElem.textContent = '☆☆☆☆☆';
             reviewTitleRateElem.appendChild(reviewRateElem);
 
             if(this.rate === 4) {
-                reviewRateElem.classList.add('reviewItem-ios__rate--4');
+                reviewRateElem.classList.add('reviewItem__rate4--ios');
             } else if(this.rate === 4.5) {
-                reviewRateElem.classList.add('reviewItem-ios__rate--4_5');
+                reviewRateElem.classList.add('reviewItem__rate4_5--ios');
             } else if(this.rate === 5) {
-                reviewRateElem.classList.add('reviewItem-ios__rate--5');
+                reviewRateElem.classList.add('reviewItem__rate5--ios');
             }
 
             const reviewDateElem = document.createElement('p');
-            reviewDateElem.classList.add('reviewItem-ios__date');
+            reviewDateElem.classList.add('reviewItem__date--ios');
             reviewDateElem.textContent = this.date;
             reviewDateUserElem.appendChild(reviewDateElem);
             
             const reviewUserElem = document.createElement('p');
-            reviewUserElem.classList.add('reviewItem-ios__user');
+            reviewUserElem.classList.add('reviewItem__user--ios');
             reviewUserElem.textContent = this.user;
             reviewDateUserElem.appendChild(reviewUserElem);
 
             const reviewDescElem = document.createElement('p');
-            reviewDescElem.classList.add('reviewItem-ios__detail');
+            reviewDescElem.classList.add('reviewItem__detail--ios');
             reviewDescElem.textContent = this.detail;
             reviewItemElem.appendChild(reviewDescElem);
         }
@@ -78,15 +77,15 @@
 
         new Review({
             user: '変態紳士',
-            title: 'サンプル',
+            title: '神すぎる！',
             date: getD(1),
             rate: 4.5,
-            detail: 'おい、これマジでスゴイぞ',
+            detail: 'おい、これマジでスゴイぞ！',
         }),
 
         new Review({
             user: 'かんた',
-            title: 'サンプル',
+            title: '想像以上',
             date: getD(1),
             rate: 5,
             detail: 'オフパコまでのスピード感ハンパない',
@@ -94,34 +93,34 @@
 
         new Review({
             user: '珍太郎',
-            title: 'サンプル',
+            title: 'サイコー',
             date: getD(2),
             rate: 4,
-            detail: `コロナ禍に俺は${t}に救われた`,
+            detail: `コロナ禍に俺は${an}に救われた`,
         }),
 
         new Review({
             user: 'ジェファーソン',
-            title: 'サンプル',
+            title: 'まぁコレが確実',
             date: getD(3),
             rate: 5,
-            detail: `ん…確かに今ところ${t}一択かな`,
+            detail: `ん…確かに今ところ${an}一択かな`,
         }),
 
         new Review({
             user: 'シコシコ番長',
-            title: 'サンプル',
+            title: '期待通り',
             date: getD(4),
             rate: 4.5,
-            detail: 'コレ絶対いれとけ！損はない',
+            detail: 'コレ絶対いれとけ！損はない！',
         }),
 
         new Review({
             user: 'きよはら',
-            title: 'サンプル',
+            title: 'オススメ！',
             date: getD(4),
             rate: 5,
-            detail: '自分の都合でオフパコできる',
+            detail: 'ホンマにオフパコできる',
         }),
     ]
 

@@ -1,19 +1,19 @@
 $block: reviewItem-ios;
 
 .#{$block} {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
-    align-content: flex-start;
-    @include fs($fsDFS);
-    letter-spacing: $ls1S;
+    // align-items: flex-start;
+    // align-content: flex-start;
+    // @include fs($fsDFS);
+    // letter-spacing: $ls1S;
     background-color: #F2F2F6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 12px;
-    padding: calcVw(12);
-    height: calcVw(170);
+    // box-sizing: border-box;
+    // border-radius: 5px;
+    // padding: 12px;
+    // padding: calcVw(12);
+    // height: calcVw(170);
     position: relative;
         
 

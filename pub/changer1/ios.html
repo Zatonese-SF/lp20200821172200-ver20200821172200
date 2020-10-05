@@ -31,7 +31,7 @@
               h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
             })(document);
 
-            const t = '<?php echo(IOS_NAME01); ?>';
+            const an = '<?php echo(IOS_NAME01); ?>';
 
           </script>
 
@@ -49,7 +49,7 @@
 
 
 
-            <div id="appInfoSub" class="appInfoSub">
+            <div id="appInfoSub" class="appInfoSub--ios">
 
                 <div class="appInfoSub__infoText">
 
@@ -63,7 +63,7 @@
 
                 <img class="appInfoSub__icon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
 
-                <a class="appInfoSub__dl" href="<?php echo($send_url); ?>">ダウンロード</a>
+                <a class="appInfoSub__dl--ios" href="<?php echo($send_url); ?>">ダウンロード</a>
 
             </div>  
 
@@ -140,13 +140,13 @@
 
                     <h1 class="appInfo__name"><?php echo(IOS_NAME01); ?></h1>
 
-                    <img class="appInfo__icon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
+                    <img class="appInfo__icon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="<?php echo(IOS_NAME01); ?>のアプリアイコン画像">
 
                     <p class="appInfo__copy">超最新版&#33;&#33;<br>オフパコ&#0183;マッチングアプリ&#33;&#33;</p>
 
                     <p class="appInfo__sub">オフパコ&#0183;マッチング</p>
 
-                    <a class="appInfo__dlBtn" href="<?php echo($send_url); ?>" alt="Aoo Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
+                    <a class="appInfo__dlBtn" href="<?php echo($send_url); ?>" alt="App Storeからダウンロード"><img src="../img/btn-ios.svg" alt="ダウンロード"></a>
 
                 </div>
 
@@ -202,13 +202,13 @@
 
                 <div class="modal_appInfo">
                     
-                    <img class="modal__appIcon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="アプリの画像">
+                    <img class="modal__appIcon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="<?php echo(IOS_NAME01); ?>のアプリアイコン画像">
 
                     <p class="modal__appName"><?php echo(IOS_NAME01); ?></p>
 
                     <p class="modal__appSub">オフパコ&#0183;マッチング</p>
 
-                    <a class="modal__appDlBtn" href="<?php echo($send_url); ?>" alt="Aoo Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
+                    <a class="modal__appDlBtn" href="<?php echo($send_url); ?>" alt="App Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
 
                 </div>
 

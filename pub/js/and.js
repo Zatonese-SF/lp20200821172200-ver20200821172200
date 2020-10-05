@@ -25,34 +25,34 @@
             const reviewListElem = document.getElementById('reviewList');
 
             const reviewItemElem = document.createElement('li');
-            reviewItemElem.classList.add('reviewItem-and');
+            reviewItemElem.classList.add('reviewItem--and');
             reviewItemElem.classList.add('swiper-slide');
             reviewListElem.appendChild(reviewItemElem);
 
             const reviewUserElem = document.createElement('p');
-            reviewUserElem.classList.add('reviewItem-and__user');
+            reviewUserElem.classList.add('reviewItem__user--and');
             reviewUserElem.textContent = this.user;
             reviewItemElem.appendChild(reviewUserElem);
 
             const reviewRateElem = document.createElement('p');
-            reviewRateElem.classList.add('reviewItem-and__rate');
+            reviewRateElem.textContent = '☆☆☆☆☆';
             reviewItemElem.appendChild(reviewRateElem);
 
             if(this.rate === 4) {
-                reviewRateElem.classList.add('reviewItem-and__rate--4');
+                reviewRateElem.classList.add('reviewItem__rate4--and');
             } else if(this.rate === 4.5) {
-                reviewRateElem.classList.add('reviewItem-and__rate--4_5');
+                reviewRateElem.classList.add('reviewItem__rate4_5--and');
             } else if(this.rate === 5) {
-                reviewRateElem.classList.add('reviewItem-and__rate--5');
+                reviewRateElem.classList.add('reviewItem__rate5--and');
             }
 
             const reviewDateElem = document.createElement('p');
-            reviewDateElem.classList.add('reviewItem-and__date');
+            reviewDateElem.classList.add('reviewItem__date--and');
             reviewDateElem.textContent = this.date;
             reviewItemElem.appendChild(reviewDateElem);
 
             const reviewDescElem = document.createElement('p');
-            reviewDescElem.classList.add('reviewItem-and__detail');
+            reviewDescElem.classList.add('reviewItem__detail--and');
             reviewDescElem.textContent = this.detail;
             reviewItemElem.appendChild(reviewDescElem);
         }
@@ -63,25 +63,47 @@
     const reviews = [
 
         new Review({
-            user: 'pooiu',
-            date: '20',
-            rate: 5,
-            detail: 'このアプリ最高すぎ！神アプリや〜',
-        }),
-
-        new Review({
-            user: 'pooiu',
-            date: '2020年9月17日',
-            rate: 4,
-            detail: 'このアプリ最高すぎ！神アプリや〜',
-        }),
-
-        new Review({
-            user: 'pooiu',
-            date: '2020年9月17日',
+            user: '変態紳士',
+            date: getD(1),
             rate: 4.5,
-            detail: 'このアプリ最高すぎ！神アプリや〜',
+            detail: 'おい、これマジでスゴイぞ！',
         }),
+
+        new Review({
+            user: 'かんた',
+            date: getD(1),
+            rate: 5,
+            detail: 'オフパコまでのスピード感ハンパない',
+        }),
+
+        new Review({
+            user: '珍太郎',
+            date: getD(2),
+            rate: 4,
+            detail: `コロナ禍に俺は${an}に救われた`,
+        }),
+
+        new Review({
+            user: 'ジェファーソン',
+            date: getD(3),
+            rate: 5,
+            detail: `ん…確かに今ところ${an}一択かな`,
+        }),
+
+        new Review({
+            user: 'シコシコ番長',
+            date: getD(4),
+            rate: 4.5,
+            detail: 'こコレ絶対いれとけ！損はない！',
+        }),
+
+        new Review({
+            user: 'きよはら',
+            date: getD(4),
+            rate: 5,
+            detail: 'ホンマにオフパコできる',
+        }),
+
     ]
 
 }
