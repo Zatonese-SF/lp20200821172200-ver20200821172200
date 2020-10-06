@@ -4,6 +4,7 @@ body {
     font-weight: 400;
     color: $fcDF;
     // width: 100%; // モーダル背景用で記述
+    // padding-bottom: calcVw(50); ← これ効かない。要検証
 }
 
 

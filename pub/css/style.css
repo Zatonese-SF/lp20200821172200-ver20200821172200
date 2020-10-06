@@ -503,6 +503,7 @@ body {
 .thumbnail__pickupItem {
   padding-top: 300px;
   padding-top: 80vw;
+  margin-bottom: 5.33333vw;
 }
 
 .thumbnail__img {

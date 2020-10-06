@@ -11,6 +11,28 @@
         return arr;
     }
 
+
+
+
+    const imgSrcJudge = (src, classN, parentElem) => {
+
+        if(src.match(/\.(jpg|png|gif)$/)) {
+            const imgElem = document.createElement('img');
+            imgElem.classList.add(classN);
+            imgElem.src = src;
+            parentElem.appendChild(imgElem);
+        } else if(src.match(/\.(mp4)$/)) {
+            const imgElem = document.createElement('video');
+            imgElem.classList.add(classN);
+            imgElem.src = src;
+            imgElem.setAttribute('playsinline', '');
+            imgElem.setAttribute('muted', '');
+            imgElem.autoplay = true;
+            imgElem.loop = true;
+            parentElem.appendChild(imgElem);
+        }
+    };
+
     
 
     
@@ -138,21 +160,23 @@
                     thumbnailList.appendChild(thumbnailItemElem);
                 }
 
-                if(this.thumbnailImg.match(/\.(jpg|png|gif)$/)) {
-                    const thumbnailImgElem = document.createElement('img');
-                    thumbnailImgElem.classList.add('thumbnail__img');
-                    thumbnailImgElem.src = this.thumbnailImg;
-                    thumbnailItemElem.appendChild(thumbnailImgElem);
-                } else if(this.thumbnailImg.match(/\.(mp4)$/)) {
-                    const thumbnailImgElem = document.createElement('video');
-                    thumbnailImgElem.classList.add('thumbnail__img');
-                    thumbnailImgElem.src = this.thumbnailImg;
-                    thumbnailImgElem.setAttribute('playsinline', '');
-                    thumbnailImgElem.setAttribute('muted', '');
-                    thumbnailImgElem.autoplay = true;
-                    thumbnailImgElem.loop = true;
-                    thumbnailItemElem.appendChild(thumbnailImgElem);
-                }
+                // if(this.thumbnailImg.match(/\.(jpg|png|gif)$/)) {
+                //     const thumbnailImgElem = document.createElement('img');
+                //     thumbnailImgElem.classList.add('thumbnail__img');
+                //     thumbnailImgElem.src = this.thumbnailImg;
+                //     thumbnailItemElem.appendChild(thumbnailImgElem);
+                // } else if(this.thumbnailImg.match(/\.(mp4)$/)) {
+                //     const thumbnailImgElem = document.createElement('video');
+                //     thumbnailImgElem.classList.add('thumbnail__img');
+                //     thumbnailImgElem.src = this.thumbnailImg;
+                //     thumbnailImgElem.setAttribute('playsinline', '');
+                //     thumbnailImgElem.setAttribute('muted', '');
+                //     thumbnailImgElem.autoplay = true;
+                //     thumbnailImgElem.loop = true;
+                //     thumbnailItemElem.appendChild(thumbnailImgElem);
+                // }
+
+                imgSrcJudge(this.thumbnailImg, 'thumbnail__img', thumbnailItemElem);
 
                 const thumbnailInfoElem = document.createElement('div');
                 thumbnailInfoElem.classList.add('thumbnail__info');
@@ -240,7 +264,7 @@
                 id: '01',
                 user: '愛香',
                 title: '限界に挑戦してみます&#x1f618;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-01.jpg',
                 label: [label.live, label.limited, label.tits, label.mark],
                 likeCount: 10000,
                 splashCount: 100,
@@ -250,7 +274,7 @@
                 id: '02',
                 user: 'AINA',
                 title: '思いっきり挿れてみたい&#x1f446;&#x1f49e;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-02.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -260,7 +284,7 @@
                 id: '03',
                 user: 'アサリ',
                 title: '溜まってます…オフパコしないなぁ…',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-03.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -270,18 +294,17 @@
                 id: '04',
                 user: '明日香',
                 title: '潮吹き見てください&#x1f4a6;&#x1f4a6;&#x1f4a6;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-04.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
             }),
 
-
             new Post({
                 id: '05',
                 user: '伊代',
                 title: '一緒に気持ち良くなりたいです',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-05.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -291,7 +314,7 @@
                 id: '06',
                 user: 'カンナ',
                 title: '誰か見てくれませんか&#x2753;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-06.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -301,7 +324,7 @@
                 id: '07',
                 user: '小梅',
                 title: '乳首イジってください&#x1f495;&#x1f495;&#x1f495;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-07.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -311,7 +334,7 @@
                 id: '08',
                 user: 'JULIA',
                 title: 'とにかく会ってエッチなことしたですー',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-08.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -321,7 +344,7 @@
                 id: '09',
                 user: 'とこも',
                 title: 'セフレ探してます&#x1f48c;&#x1f48b;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-09.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -331,7 +354,7 @@
                 id: '10',
                 user: 'ナミ',
                 title: '潮吹いたことないです…吹かせて下さい。',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-10.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -341,7 +364,7 @@
                 id: '11',
                 user: 'ふーちん',
                 title: 'オフパコ希望&#x1f493;&#x1f493;&#x1f493;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-11.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -351,7 +374,7 @@
                 id: '12',
                 user: 'フミ',
                 title: 'フェラさせてー&#x1f445;&#x1f445;&#x1f445;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-12.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -361,7 +384,7 @@
                 id: '13',
                 user: 'MARI',
                 title: '初心者です&#x2757;&#x2757;ヨロシクです',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-13.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -371,7 +394,7 @@
                 id: '14',
                 user: 'ミッキー',
                 title: 'オマ●コおっぴろげまーす&#x1f61d;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-14.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -379,9 +402,9 @@
 
             new Post({
                 id: '15',
-                user: '萌',
+                user: '萌&欄',
                 title: 'エッチ教えて下さい&#x1f60a;&#x1f497;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-15.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -391,7 +414,7 @@
                 id: '16',
                 user: 'ももか',
                 title: 'オフパコやりましょー&#x2757;&#x2757;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-16.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -401,7 +424,7 @@
                 id: '17',
                 user: '弥生',
                 title: 'ア〜ン…イク〜&#x1f92a;&#x1f496;&#x1f4a6;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-17.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -411,7 +434,7 @@
                 id: '18',
                 user: '優梨',
                 title: '即オフパコヤりたいです&#x1f496;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-18.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -420,8 +443,8 @@
             new Post({
                 id: '19',
                 user: 'らら',
-                title: 'わたしのオッパイすっごいですよ(笑)',
-                thumbnailImg: '../img/r18.png',
+                title: 'お・ケ・ツ&#x1f496;',
+                thumbnailImg: '../img/thumbnail_img-19.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -430,8 +453,8 @@
             new Post({
                 id: '20',
                 user: 'リリ',
-                title: '舐めたいなぁ…&#x1f445;&#x1f48b;',
-                thumbnailImg: '../img/r18.png',
+                title: 'エッチしないなぁ…&#x1f445;&#x1f48b;',
+                thumbnailImg: '../img/thumbnail_img-20.jpg',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -441,7 +464,7 @@
                 id: '21',
                 user: '和香',
                 title: 'オフパコ&#x1f493;オフパコ&#x1f493;オフパコ&#x1f493;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-21.mp4',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -452,7 +475,7 @@
                 id: '22',
                 user: 'カレン',
                 title: 'お相手してくださーい&#x1f63a;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-22.mp4',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -463,7 +486,7 @@
                 id: '23',
                 user: 'NANA',
                 title: 'おまんこ見てください&#x2757;&#x2757;',
-                thumbnailImg: '../img/r18.png',
+                thumbnailImg: '../img/thumbnail_img-23.mp4',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -473,8 +496,8 @@
             new Post({
                 id: '24',
                 user: 'はな',
-                title: 'チンポ大好き&#x1f493;&#x1f44d;&#x1f61c;',
-                thumbnailImg: '../img/r18.png',
+                title: 'オナニー大好き&#x1f493;&#x1f44d;&#x1f61c;',
+                thumbnailImg: '../img/thumbnail_img-24.mp4',
                 label: [],
                 likeCount: 10000,
                 splashCount: 100,
@@ -524,67 +547,143 @@
         const modal = document.getElementById('modal');
         const modalClose = document.getElementById('modalClose');
         const mask = document.getElementById('mask');
+        
+        const modalCatchs = {
 
-        const modalOpenProc = () => {
+            mainVisualClick01: 'mv01',
+            mainVisualClick02: 'mv02',
+            mainVisualClick03: 'mv03',
+            mainVisualClick04: 'mv04',
+            mainVisualClick05: 'mv05',
+            tagItemClick: '限定',
+            thumbnailItemClick: 'オッパイ',
+        };
+
+        const tt = 'terr';
+
+        
+
+        // const modalOpenProc = (e) => {
+            function modalOpenProc(e) {
+
+            const modalCatchElem = document.createElement('p');
+            modalCatchElem.classList.add('modal__catch');
+            const modalAppInfo = document.getElementById('modalAppInfo');
+            modal.insertBefore(modalCatchElem, modalAppInfo);
+
+            // modalCatchElem.textContent = catchText;
+            modalCatchElem.textContent = this.name;
+
+            console.log('Hello, ' + this.name);
+
+
             
-            const modalVisuals = [
-                '../img/r18.png',
-                'https://pocketmonster-gogo.com/video/peacepaco/01/video03.mp4',
-                '../img/btn-and.png',
-                '../img/r18.png',
-                '../img/r18.png',
-            ]
+            // const modalVisuals = [
+            //     '../img/r18.png',
+            //     'https://pocketmonster-gogo.com/video/peacepaco/01/video03.mp4',
+            //     '../img/btn-and.png',
+            //     '../img/r18.png',
+            //     '../img/r18.png',
+            // ]
 
-            const n = Math.floor(Math.random() * 3);
-            const modalVisualSrc = modalVisuals[n];
+            // const n = Math.floor(Math.random() * 3);
+            // const modalVisualSrc = modalVisuals[n];
 
-            const elemCreate = (elem) => {
-                const modalVisualElem = document.getElementById('modalVisual');
-                elem.classList.add('modal__visualImg');
-                elem.src = modalVisualSrc;
-                modalVisualElem.appendChild(elem);
+            // const elemCreate = (elem) => {
+            //     const modalVisualElem = document.getElementById('modalVisual');
+            //     elem.classList.add('modal__visualImg');
+            //     elem.src = modalVisualSrc;
+            //     modalVisualElem.appendChild(elem);
 
-            };
+            // };
             
-            if(modalVisualSrc.match(/\.(jpg|png|gif)$/)) {
-                const modalVisualImgElem = document.createElement('img');
-                elemCreate(modalVisualImgElem);
-            } else if(modalVisualSrc.match(/\.(mp4)$/)) {
-                const modalVisualImgElem = document.createElement('video');
-                elemCreate(modalVisualImgElem);
-                modalVisualImgElem.setAttribute('playsinline', '');
-                modalVisualImgElem.setAttribute('muted', '');
-                modalVisualImgElem.autoplay = true;
-                modalVisualImgElem.loop = true;
-            }
+            // if(modalVisualSrc.match(/\.(jpg|png|gif)$/)) {
+            //     const modalVisualImgElem = document.createElement('img');
+            //     elemCreate(modalVisualImgElem);
+            // } else if(modalVisualSrc.match(/\.(mp4)$/)) {
+            //     const modalVisualImgElem = document.createElement('video');
+            //     elemCreate(modalVisualImgElem);
+            //     modalVisualImgElem.setAttribute('playsinline', '');
+            //     modalVisualImgElem.setAttribute('muted', '');
+            //     modalVisualImgElem.autoplay = true;
+            //     modalVisualImgElem.loop = true;
+            // }
             
             $('#modal').show('fade', 200);
             $('#mask').show('fade', 200);
         };
-        
+
         const modalCloseProc = () => {
-            document.querySelector('.modal__visualImg').remove();
+            document.querySelector('.modal__catch').remove();
 
             modal.style.display = 'none';
             mask.style.display = 'none';
         };
 
-
+        
 
         const mainVisual = document.getElementById('mainVisual');
+        const mainVisualItem01 = document.querySelectorAll('#mainVisualItem li')[0];
+        const mainVisualItem02 = document.querySelectorAll('#mainVisualItem li')[1];
+        const mainVisualItem03 = document.querySelectorAll('#mainVisualItem li')[2];
+        const mainVisualItem04 = document.querySelectorAll('#mainVisualItem li')[3];
+        const mainVisualItem05 = document.querySelectorAll('#mainVisualItem li')[4];
         const tagItem = document.querySelectorAll('.tag__list li');
         const thumbnailItem = document.querySelectorAll('.thumbnailList > li');
 
-        mainVisual.addEventListener('click', modalOpenProc);
+        // mainVisual.addEventListener('click', () => {
+        //     modalOpenProc(modalCatchs.mainVisualClick);
+        // });
+        // mainVisualItem01.addEventListener('click', () => {
+        //     modalOpenProc(modalCatchs.mainVisualClick01);
+        // });
+
+        const userName = 'Ken';
+        const target = document.getElementById('start-button');
+
+        function sayHello(e){
+            console.log('Hello, ' + this.name);
+        };
+
+        mainVisualItem01.addEventListener('click', {name: modalCatchs.mainVisualClick01, handleEvent: modalOpenProc});
+        mainVisualItem02.addEventListener('click', {name: modalCatchs.mainVisualClick02, handleEvent: modalOpenProc});
+        mainVisualItem03.addEventListener('click', {name: modalCatchs.mainVisualClick03, handleEvent: modalOpenProc});
+        mainVisualItem04.addEventListener('click', {name: modalCatchs.mainVisualClick04, handleEvent: modalOpenProc});
+        mainVisualItem05.addEventListener('click', {name: modalCatchs.mainVisualClick05, handleEvent: modalOpenProc});
+
+
+
+
+        // mainVisualItem02.addEventListener('click', () => {
+        //     modalOpenProc(modalCatchs.mainVisualClick02);
+        // });
+
+        // mainVisualItem03.addEventListener('click', () => {
+        //     modalOpenProc(modalCatchs.mainVisualClick03);
+        // });
+
+        // mainVisualItem04.addEventListener('click', () => {
+        //     modalOpenProc(modalCatchs.mainVisualClick04);
+        // });
+
+        // mainVisualItem05.addEventListener('click', () => {
+        //     modalOpenProc(modalCatchs.mainVisualClick05);
+        // });
+
+
 
         tagItem.forEach((item) => {
 
-            item.addEventListener('click', modalOpenProc);
+            item.addEventListener('click', () => {
+                modalOpenProc(modalCatchs.tagItemClick);
+            });
         });
 
         thumbnailItem.forEach((item) => {
 
-            item.addEventListener('click', modalOpenProc);
+            item.addEventListener('click', () => {
+                modalOpenProc(modalCatchs.thumbnailItemClick);
+            });
         });
 
         modalClose.addEventListener('click', modalCloseProc);

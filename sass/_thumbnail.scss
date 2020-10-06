@@ -46,6 +46,7 @@ $block: thumbnail;
         @extend %item;
         padding-top: 300px;
         padding-top: calcVw(300);
+        margin-bottom: calcVw(20);
     }
 
 
