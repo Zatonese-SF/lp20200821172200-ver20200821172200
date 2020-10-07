@@ -71,6 +71,8 @@
 
 
 
+
+
         <section class="news">
 
             <h1>News</h1>
@@ -81,6 +83,8 @@
            </dl>
 
         </section>
+
+
 
 
 
@@ -108,6 +112,8 @@
 
 
 
+
+
             <ul class="tag">
 
                 <li class="tag__listWrap">
@@ -126,6 +132,8 @@
             
 
 
+
+
             <div class="thumbnail thumbnail--main">
 
                 <ul id="mainThumbnailList" class="thumbnailList thumbnail__list"></ul>
@@ -134,21 +142,26 @@
 
 
 
-            <section class="appInfo">
 
-                <div class="appInfo__basic">
 
-                    <h1 class="appInfo__name"><?php echo(IOS_NAME01); ?></h1>
+            <section class="mainAppInfo">
 
-                    <img class="appInfo__icon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="<?php echo(IOS_NAME01); ?>のアプリアイコン画像">
+                <div class="appInfo">
 
-                    <p class="appInfo__copy">超最新版&#33;&#33;<br>オフパコ&#0183;マッチングアプリ&#33;&#33;</p>
+                    <h1 class="appInfoName"><?php echo(IOS_NAME01); ?></h1>
 
-                    <p class="appInfo__sub">オフパコ&#0183;マッチング</p>
+                    <img class="appInfoIcon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="<?php echo(IOS_NAME01); ?>のアプリアイコン画像">
 
-                    <a class="appInfo__dlBtn" href="<?php echo($send_url); ?>" alt="App Storeからダウンロード"><img src="../img/btn-ios.svg" alt="ダウンロード"></a>
+                    <p class="appInfoCopy">超最新版&#33;&#33;<br>オフパコ&#0183;マッチングアプリ&#33;&#33;</p>
+
+                    <p class="appInfoGenre">オフパコ&#0183;マッチング</p>
+
+                    <p class="appInfoFree">ダウンロード<span>無料</span>&#x203C;</p>
+
+                    <a class="appInfoBtn" href="<?php echo($send_url); ?>" alt="App Storeからダウンロード"><img src="../img/btn-ios.svg" alt="ダウンロード"></a>
 
                 </div>
+
 
 
                 <section class="review">
@@ -165,7 +178,7 @@
 
 
                 
-                <dl class="appInfo__caution">
+                <dl class="appInfoCaution">
 
                     <dt>&#x203B;注意</dt>
                     <dd>App Storeでは&#xFF64;基本的にアダルト要素の強いアプリは禁止とされている為&#xFF64;いきなりストアから削除される可能性も考えられます&#x3002;ダウンロードは&#xFF64;すぐにできるのでストアから削除される事態が起こる前に早めにインストールすることを強くオススメします&#x3002;</dd>
@@ -190,63 +203,37 @@
 
             <div id="mask" class="mask"></div>
 
-            <!-- <div id="modal" class="modal">
-
-                <div id="modalVisual" class="modal__visual">
-
-                    <p class="modal__text"><span class="modal__text01">エロ可愛い娘ちゃん達が待ってます&#33;</span><span class="modal__text03">無料ですぐにダウンロードできます&#33;</span><span class="modal__text03">是非&#12289;オフパコをお楽しみ下さい&#33;&#33;</span></p>
-
-                </div>
-
-
-
-                <div class="modal_appInfo">
-                    
-                    <img class="modal__appIcon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="<?php echo(IOS_NAME01); ?>のアプリアイコン画像">
-
-                    <p class="modal__appName"><?php echo(IOS_NAME01); ?></p>
-
-                    <p class="modal__appSub">オフパコ&#0183;マッチング</p>
-
-                    <a class="modal__appDlBtn" href="<?php echo($send_url); ?>" alt="App Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
-
-                </div>
-
-                <div id="modalClose" class="modal__close"><img src="../img/close.svg" alt="閉じる"></div>
-
-            </div> -->
-            
-            
-            
             <div id="modal" class="modal">
 
-                <!-- <div id="modalVisual" class="modal__visual">
+                <div class="modalAppInfo">
 
-                    <p class="modal__text"><span class="modal__text01">エロ可愛い娘ちゃん達が待ってます&#33;</span><span class="modal__text03">無料ですぐにダウンロードできます&#33;</span><span class="modal__text03">是非&#12289;オフパコをお楽しみ下さい&#33;&#33;</span></p>
+                    <div class="appInfo">
 
-                </div> -->
+                        <p class="appInfoCopy">超最新版&#33;&#33;<br>オフパコ&#0183;マッチングアプリ&#33;&#33;</p>
+                        
+                        <img class="appInfoIcon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="<?php echo(IOS_NAME01); ?>のアプリアイコン画像">
+                        
+                        <p class="appInfoName"><?php echo(IOS_NAME01); ?></p>
 
-
-                <!-- <p class="modal__catch">無料ですぐにダウンロードできます。</p> -->
-
-
-                <div id="modalAppInfo" class="modal__appInfo">
-                    
-                    <img class="modal__appIcon" src="//pocketmonster-gogo.com/appicon/ios/<?php echo($iosapp); ?>/img/icon_ad.png" alt="<?php echo(IOS_NAME01); ?>のアプリアイコン画像">
-
-                    <p class="modal__appName"><?php echo(IOS_NAME01); ?></p>
-
-                    <p class="modal__appSub">オフパコ&#0183;マッチング</p>
-
-                    <a class="modal__appDlBtn" href="<?php echo($send_url); ?>" alt="App Storeからダウンロード"><img src="../img/btn-ios.svg"></a>
+                        <p class="appInfoGenre">オフパコ&#0183;マッチング</p>
+    
+                        <p class="appInfoFree">ダウンロード<span>無料</span>&#x203C;</p>
+    
+                        <a class="appInfoBtn" href="<?php echo($send_url); ?>" alt="App Storeからダウンロード"><img src="../img/btn-ios.svg" alt="ダウンロード"></a>
+    
+                    </div>
 
                 </div>
+
+
 
                 <div id="modalClose" class="modal__close"><img src="../img/close.svg" alt="閉じる"></div>
 
             </div>
 
         </main>
+
+
 
 
 
@@ -262,7 +249,7 @@
         
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="../js/swiper_org.js"></script>
-        
+
     </body>
 
 </html>

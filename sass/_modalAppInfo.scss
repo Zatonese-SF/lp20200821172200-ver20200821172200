@@ -1,0 +1,117 @@
+$block: modalAppInfo;
+
+.#{$block} {
+
+    .appInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+
+    .appInfoCopy {
+        @include fs($fs1L);
+        font-weight: bold;
+        letter-spacing: $ls1S;
+        line-height: $lh2S;
+        color: $sc01;
+        margin-bottom: 15px;
+        margin-bottom: calcVw(15);
+    }
+
+
+
+    .appInfoIcon {
+        width: 85px;
+        width: calcVw(85);
+        height: 85px;
+        height: calcVw(85);
+        margin-bottom: 20px;
+        margin-bottom: calcVw(20);
+    }
+    
+    
+    
+    .appInfoName {
+        @include fs($fs2L);
+        font-weight: bold;
+        letter-spacing: $ls1S;
+        margin-bottom: 10px;
+        margin-bottom: calcVw(10);
+    }
+    
+    
+    
+    .appInfoGenre {
+        @include fs($fsDFS);
+        letter-spacing: $lsDF;
+        color: $fc01;
+        margin-bottom: 50px;
+        margin-bottom: calcVw(50);
+    }
+
+
+
+    .appInfoFree {
+        @include fs($fsDF);
+        font-weight: bold;
+        letter-spacing: $lsDF;
+        margin-bottom: 10px;
+        margin-bottom: calcVw(10);
+        animation:blink .5s ease-in-out infinite alternate;
+
+
+
+        @keyframes blink {
+            0% {opacity:0;}
+            100% {opacity:1;}
+        }
+
+
+
+        @at-root {
+
+            %arrow {
+                font-family: "Font Awesome 5 Free";
+            }
+        }
+
+
+
+        &::before {
+            @extend %arrow;
+            content: '\f063';
+            margin-right: 0.5em;
+        }
+
+
+
+        &::after {
+            @extend %arrow;
+            content: '\f063';
+            margin-left: 0.5em;
+        }
+
+
+
+        span {
+            @include fs($fs1LL);
+            color: red;
+        }
+    }
+    
+    
+    
+    .appInfoBtn {
+        display: block;
+        width: 230px;
+        width: calcVw(230);
+    
+    
+    
+        img {
+            width: 100%;
+        }
+    }
+}

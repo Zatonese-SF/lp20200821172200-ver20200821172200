@@ -7,8 +7,8 @@ $block: modal;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     box-sizing: border-box;
-    padding: 10px 10px 30px 10px;
-    padding: calcVw(10) calcVw(10) calcVw(30) calcVw(10);
+    padding: 20px 20px 30px;
+    padding: calcVw(20) calcVw(20) calcVw(30);
     width: 325px;
     width: calcVw(325);
     margin: 0 auto;
@@ -21,109 +21,13 @@ $block: modal;
 
 
 
-    &__visual {
-        padding-top: 250px;
-        padding-top: calcVw(250);
-        margin-bottom: 50px;
-        margin-bottom: calcVw(50);
-        position: relative;
-    }
-
-
-
-    &__visualImg {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-
-
-    &__text {
-        position: absolute;
-        top: 170px;
-        top: calcVw(170);
-        left: 0;
-        z-index: 1;
-
-
-
-        span {
-            display: block;
-            @include fs($fsDFS);
-            font-weight: bold;
-            letter-spacing: $lsDF;
-            background-color: rgba(255,255,255,0.8);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            padding: 8px;
-            padding: calcVw(8);
-
-            &:nth-child(1),
-            &:nth-child(2) {
-                margin-bottom: 5px;
-                margin-bottom: calcVw(5);
-            }
-        }
-    }
-
-
-
-
-    &__appInfo {
-        text-align: center;
-    }
-
-
-
-    &__appIcon {
-        display: block;
-        width: 85px;
-        width: calcVw(85);
-        height: 85px;
-        height: calcVw(85);
-        margin-bottom: 20px;
-        margin: 0 auto calcVw(20);
-    }
-
-
-
-    &__appName {
-        @include fs($fs2L);
+    &__copy02 {
+        @include fs($fsDF);
         font-weight: bold;
-        letter-spacing: $ls3S;
-        text-align: center;
-        margin-bottom: 10px;
-        margin-bottom: calcVw(10);
-    }
-
-
-
-    &__appSub {
-        @include fs($fsDFS);
         letter-spacing: $ls1S;
-        color: $fc01;
-        text-align: center;
-        margin-bottom: 50px;
+        line-height: $lh2S;
+        margin-bottom: 30px;
         margin-bottom: calcVw(30);
-    }
-
-
-
-    &__appDlBtn {
-        display: block;
-        width: 200px;
-        width: calcVw(200);
-        margin: 0 auto;
-
-
-
-        img {
-            width: 100%;
-        }
     }
 
 

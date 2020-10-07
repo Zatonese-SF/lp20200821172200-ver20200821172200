@@ -187,7 +187,7 @@ body {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-bottom: 1px solid #BDBDC3;
+  border-bottom: 1px solid #dddddd;
   padding: 12px 15px 12px 20px;
   padding: 3.2vw 4vw 3.2vw 5.33333vw;
   position: fixed;
@@ -642,14 +642,14 @@ body {
   width: 100%;
 }
 
-.appInfo {
+.mainAppInfo {
   padding: 0 15px 0;
   padding: 0 4vw 0;
   margin-bottom: 70px;
   margin-bottom: 18.66667vw;
 }
 
-.appInfo__basic {
+.mainAppInfo .appInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -660,11 +660,11 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 0 40px;
-  padding: 0 0 10.66667vw;
+  padding-bottom: 40px;
+  padding-bottom: 10.66667vw;
 }
 
-.appInfo__name {
+.mainAppInfo .appInfoName {
   font-size: 2.4rem;
   font-size: 6.4vw;
   font-weight: bold;
@@ -676,7 +676,7 @@ body {
   order: 3;
 }
 
-.appInfo__icon {
+.mainAppInfo .appInfoIcon {
   width: 85px;
   width: 22.66667vw;
   height: 85px;
@@ -688,7 +688,7 @@ body {
   order: 2;
 }
 
-.appInfo__copy {
+.mainAppInfo .appInfoCopy {
   font-size: 2.4rem;
   font-size: 6.4vw;
   font-weight: bold;
@@ -702,7 +702,7 @@ body {
   order: 1;
 }
 
-.appInfo__sub {
+.mainAppInfo .appInfoGenre {
   font-size: 1.4rem;
   font-size: 3.73333vw;
   letter-spacing: 0.1em;
@@ -714,20 +714,72 @@ body {
   order: 4;
 }
 
-.appInfo__dlBtn {
-  display: block;
-  width: 260px;
-  width: 69.33333vw;
+.mainAppInfo .appInfoFree {
+  font-size: 2rem;
+  font-size: 5.33333vw;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  margin-bottom: 2.66667vw;
   -webkit-box-ordinal-group: 6;
   -ms-flex-order: 5;
   order: 5;
+  -webkit-animation: blink .5s ease-in-out infinite alternate;
+  animation: blink .5s ease-in-out infinite alternate;
 }
 
-.appInfo__dlBtn img {
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mainAppInfo .appInfoFree::before, .mainAppInfo .appInfoFree::after, .modalAppInfo .appInfoFree::before, .modalAppInfo .appInfoFree::after {
+  font-family: "Font Awesome 5 Free";
+}
+
+.mainAppInfo .appInfoFree::before {
+  content: '\f063';
+  margin-right: 0.5em;
+}
+
+.mainAppInfo .appInfoFree::after {
+  content: '\f063';
+  margin-left: 0.5em;
+}
+
+.mainAppInfo .appInfoFree span {
+  font-size: 2.4rem;
+  font-size: 6.4vw;
+  color: red;
+}
+
+.mainAppInfo .appInfoBtn {
+  display: block;
+  width: 260px;
+  width: 69.33333vw;
+  -webkit-box-ordinal-group: 7;
+  -ms-flex-order: 6;
+  order: 6;
+}
+
+.mainAppInfo .appInfoBtn img {
   width: 100%;
 }
 
-.appInfo__caution dt {
+.mainAppInfo .appInfoCaution dt {
   font-size: 1.8rem;
   font-size: 4.8vw;
   font-weight: bold;
@@ -737,7 +789,7 @@ body {
   margin-bottom: 1.33333vw;
 }
 
-.appInfo__caution dd {
+.mainAppInfo .appInfoCaution dd {
   font-size: 1.6rem;
   font-size: 4.26667vw;
   letter-spacing: 0.1em;
@@ -886,8 +938,8 @@ body {
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px 10px 30px 10px;
-  padding: 2.66667vw 2.66667vw 8vw 2.66667vw;
+  padding: 20px 20px 30px;
+  padding: 5.33333vw 5.33333vw 8vw;
   width: 325px;
   width: 86.66667vw;
   margin: 0 auto;
@@ -899,94 +951,14 @@ body {
   z-index: 2;
 }
 
-.modal__visual {
-  padding-top: 250px;
-  padding-top: 66.66667vw;
-  margin-bottom: 50px;
-  margin-bottom: 13.33333vw;
-  position: relative;
-}
-
-.modal__visualImg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.modal__text {
-  position: absolute;
-  top: 170px;
-  top: 45.33333vw;
-  left: 0;
-  z-index: 1;
-}
-
-.modal__text span {
-  display: block;
-  font-size: 1.4rem;
-  font-size: 3.73333vw;
+.modal__copy02 {
+  font-size: 1.6rem;
+  font-size: 4.26667vw;
   font-weight: bold;
-  letter-spacing: 0.1em;
-  background-color: rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 8px;
-  padding: 2.13333vw;
-}
-
-.modal__text span:nth-child(1), .modal__text span:nth-child(2) {
-  margin-bottom: 5px;
-  margin-bottom: 1.33333vw;
-}
-
-.modal__appInfo {
-  text-align: center;
-}
-
-.modal__appIcon {
-  display: block;
-  width: 85px;
-  width: 22.66667vw;
-  height: 85px;
-  height: 22.66667vw;
-  margin-bottom: 20px;
-  margin: 0 auto 5.33333vw;
-}
-
-.modal__appName {
-  font-size: 2.4rem;
-  font-size: 6.4vw;
-  font-weight: bold;
-  letter-spacing: 0.04em;
-  text-align: center;
-  margin-bottom: 10px;
-  margin-bottom: 2.66667vw;
-}
-
-.modal__appSub {
-  font-size: 1.4rem;
-  font-size: 3.73333vw;
   letter-spacing: 0.08em;
-  color: #777777;
-  text-align: center;
-  margin-bottom: 50px;
+  line-height: 1.4;
+  margin-bottom: 30px;
   margin-bottom: 8vw;
-}
-
-.modal__appDlBtn {
-  display: block;
-  width: 200px;
-  width: 53.33333vw;
-  margin: 0 auto;
-}
-
-.modal__appDlBtn img {
-  width: 100%;
 }
 
 .modal__close {
@@ -1003,6 +975,107 @@ body {
 }
 
 .modal__close img {
+  width: 100%;
+}
+
+.modalAppInfo .appInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.modalAppInfo .appInfoCopy {
+  font-size: 2rem;
+  font-size: 5.33333vw;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  color: #ff3399;
+  margin-bottom: 15px;
+  margin-bottom: 4vw;
+}
+
+.modalAppInfo .appInfoIcon {
+  width: 85px;
+  width: 22.66667vw;
+  height: 85px;
+  height: 22.66667vw;
+  margin-bottom: 20px;
+  margin-bottom: 5.33333vw;
+}
+
+.modalAppInfo .appInfoName {
+  font-size: 2.4rem;
+  font-size: 6.4vw;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  margin-bottom: 2.66667vw;
+}
+
+.modalAppInfo .appInfoGenre {
+  font-size: 1.4rem;
+  font-size: 3.73333vw;
+  letter-spacing: 0.1em;
+  color: #777777;
+  margin-bottom: 50px;
+  margin-bottom: 13.33333vw;
+}
+
+.modalAppInfo .appInfoFree {
+  font-size: 1.6rem;
+  font-size: 4.26667vw;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  margin-bottom: 2.66667vw;
+  -webkit-animation: blink .5s ease-in-out infinite alternate;
+  animation: blink .5s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mainAppInfo .appInfoFree::before, .mainAppInfo .appInfoFree::after, .modalAppInfo .appInfoFree::before, .modalAppInfo .appInfoFree::after {
+  font-family: "Font Awesome 5 Free";
+}
+
+.modalAppInfo .appInfoFree::before {
+  content: '\f063';
+  margin-right: 0.5em;
+}
+
+.modalAppInfo .appInfoFree::after {
+  content: '\f063';
+  margin-left: 0.5em;
+}
+
+.modalAppInfo .appInfoFree span {
+  font-size: 2.2rem;
+  font-size: 5.86667vw;
+  color: red;
+}
+
+.modalAppInfo .appInfoBtn {
+  display: block;
+  width: 230px;
+  width: 61.33333vw;
+}
+
+.modalAppInfo .appInfoBtn img {
   width: 100%;
 }
 
