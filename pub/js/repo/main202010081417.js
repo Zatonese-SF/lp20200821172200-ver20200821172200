@@ -147,97 +147,121 @@
             thumbnail() {
 
                 const thumbnailId = 'thumbnailId' + this.id;
-                const thumbnailItemElem = document.createElement('li');
-                thumbnailItemElem.id = thumbnailId;
-
+                
                 if(this.status === 'pickup') {
-                    const thumbnailList = document.getElementById('pickupThumbnailList');
-                    thumbnailItemElem.classList.add('thumbnail__pickupItem');
-                    thumbnailList.appendChild(thumbnailItemElem);
+                    // const thumbnailList = document.getElementById('pickupThumbnailList');
+                    const videoThumbnailItemElem = document.querySelector('#pickupThumbnailList li');
+
+                    // videoThumbnailItemElem.forEach((item) => {
+
+                        videoThumbnailItemElem.id = thumbnailId;
+                        videoThumbnailItemElem.classList.add('thumbnail__pickupItem');
+
+                    // });
+
+
+                    // const videoThumbnailImgElem = document.querySelectorAll('#pickupThumbnailList li video');
+
+                    // videoThumbnailImgElem.forEach((item) => {
+
+                    //     item.src = this.thumbnailImg;
+                    // });
+
+
+
+                    
+
+                    
+
+
+
                 } else {
+                    const thumbnailItemElem = document.createElement('li');
+                    thumbnailItemElem.id = thumbnailId;
+
                     const thumbnailList = document.getElementById('mainThumbnailList');
                     thumbnailItemElem.classList.add('thumbnail__mainItem');
                     thumbnailList.appendChild(thumbnailItemElem);
+
+                    imgSrcJudge(this.thumbnailImg, 'thumbnail__img', thumbnailItemElem);
+
+                    const thumbnailInfoElem = document.createElement('div');
+                    thumbnailInfoElem.classList.add('thumbnail__info');
+                    thumbnailItemElem.appendChild(thumbnailInfoElem);
+            
+                    const thumbnailTitleElem = document.createElement('div');
+                    thumbnailTitleElem.classList.add('thumbnail__title');
+                    thumbnailTitleElem.innerHTML = this.title;
+                    thumbnailInfoElem.appendChild(thumbnailTitleElem);
+
+                    const thumbnailuserElem = document.createElement('div');
+                    thumbnailuserElem.classList.add('thumbnail__user');
+                    thumbnailuserElem.textContent = this.user;
+                    thumbnailInfoElem.appendChild(thumbnailuserElem);
+
+                    const thumbnailReactionElem = document.createElement('div');
+                    thumbnailReactionElem.classList.add('thumbnail__reaction');
+                    thumbnailInfoElem.appendChild(thumbnailReactionElem);
+
+                    const thumbnailSplashCountElem = document.createElement('div');
+                    thumbnailSplashCountElem.classList.add('thumbnail__splash');
+                    thumbnailSplashCountElem.textContent = this.splashCount;
+                    thumbnailReactionElem.appendChild(thumbnailSplashCountElem);
+
+                    const thumbnailLikeCountElem = document.createElement('div');
+                    thumbnailLikeCountElem.classList.add('thumbnail__like');
+                    thumbnailLikeCountElem.textContent = this.likeCount;
+                    thumbnailReactionElem.appendChild(thumbnailLikeCountElem);
+                    
+                    const thumbnailLabelElem = document.createElement('ul');
+                    thumbnailLabelElem.classList.add('thumbnail__label');
+                    thumbnailItemElem.appendChild(thumbnailLabelElem);
+            
+                    if(this.label.includes(label.live) === true) {
+                        const thumbnailLiveLabelElem = document.createElement('li');
+                        thumbnailLiveLabelElem.classList.add('thumbnail__label-live');
+                        const thumbnailLiveLabelImgElem = document.createElement('img');
+                        thumbnailLiveLabelImgElem.src = '../img/live.svg';
+                        thumbnailLiveLabelImgElem.alt = label.live;
+                        thumbnailLiveLabelElem.appendChild(thumbnailLiveLabelImgElem);
+                        thumbnailLabelElem.appendChild(thumbnailLiveLabelElem);
+                    }
+                    
+                    if(this.label.includes(label.limited) === true) {
+                        const thumbnaiLimitedLabelElem = document.createElement('li');
+                        thumbnaiLimitedLabelElem.classList.add('thumbnail__label-limited');
+                        const thumbnailLimitedLabelImgElem = document.createElement('img');
+                        thumbnailLimitedLabelImgElem.src = '../img/limited.svg';
+                        thumbnailLimitedLabelImgElem.alt = label.limited;
+                        thumbnaiLimitedLabelElem.appendChild(thumbnailLimitedLabelImgElem);
+                        thumbnailLabelElem.appendChild(thumbnaiLimitedLabelElem);
+                    }
+                    
+                    if(this.label.includes(label.tits) === true) {
+                        const thumbnailTitsLabelElem = document.createElement('li');
+                        thumbnailTitsLabelElem.classList.add('thumbnail__label-tits');
+                        const thumbnailTitsLabelImgElem = document.createElement('img');
+                        thumbnailTitsLabelImgElem.src = '../img/tits.png';
+                        thumbnailTitsLabelImgElem.alt = label.tits;
+                        thumbnailTitsLabelElem.appendChild(thumbnailTitsLabelImgElem);
+                        thumbnailLabelElem.appendChild(thumbnailTitsLabelElem);
+                    }
+
+                    if(this.label.includes(label.mark) === true) {
+                        const thumbnailMarkLabelElem = document.createElement('li');
+                        thumbnailMarkLabelElem.classList.add('thumbnail__label-mark');
+                        const thumbnailMarkLabelImgElem = document.createElement('img');
+                        thumbnailMarkLabelImgElem.src = '../img/mark.png';
+                        thumbnailMarkLabelImgElem.alt = label.mark;
+                        thumbnailMarkLabelElem.appendChild(thumbnailMarkLabelImgElem);
+                        thumbnailLabelElem.appendChild(thumbnailMarkLabelElem);
+                    }
+
+                    if(thumbnailLabelElem.children.length === 0) {
+                        thumbnailLabelElem.remove();
+                    }
                 }
-
-                imgSrcJudge(this.thumbnailImg, 'thumbnail__img', thumbnailItemElem);
-
-                const thumbnailInfoElem = document.createElement('div');
-                thumbnailInfoElem.classList.add('thumbnail__info');
-                thumbnailItemElem.appendChild(thumbnailInfoElem);
-        
-                const thumbnailTitleElem = document.createElement('div');
-                thumbnailTitleElem.classList.add('thumbnail__title');
-                thumbnailTitleElem.innerHTML = this.title;
-                thumbnailInfoElem.appendChild(thumbnailTitleElem);
-
-                const thumbnailuserElem = document.createElement('div');
-                thumbnailuserElem.classList.add('thumbnail__user');
-                thumbnailuserElem.textContent = this.user;
-                thumbnailInfoElem.appendChild(thumbnailuserElem);
-
-                const thumbnailReactionElem = document.createElement('div');
-                thumbnailReactionElem.classList.add('thumbnail__reaction');
-                thumbnailInfoElem.appendChild(thumbnailReactionElem);
-
-                const thumbnailSplashCountElem = document.createElement('div');
-                thumbnailSplashCountElem.classList.add('thumbnail__splash');
-                thumbnailSplashCountElem.textContent = this.splashCount;
-                thumbnailReactionElem.appendChild(thumbnailSplashCountElem);
-
-                const thumbnailLikeCountElem = document.createElement('div');
-                thumbnailLikeCountElem.classList.add('thumbnail__like');
-                thumbnailLikeCountElem.textContent = this.likeCount;
-                thumbnailReactionElem.appendChild(thumbnailLikeCountElem);
-                
-                const thumbnailLabelElem = document.createElement('ul');
-                thumbnailLabelElem.classList.add('thumbnail__label');
-                thumbnailItemElem.appendChild(thumbnailLabelElem);
-        
-                if(this.label.includes(label.live) === true) {
-                    const thumbnailLiveLabelElem = document.createElement('li');
-                    thumbnailLiveLabelElem.classList.add('thumbnail__label-live');
-                    const thumbnailLiveLabelImgElem = document.createElement('img');
-                    thumbnailLiveLabelImgElem.src = '../img/live.svg';
-                    thumbnailLiveLabelImgElem.alt = label.live;
-                    thumbnailLiveLabelElem.appendChild(thumbnailLiveLabelImgElem);
-                    thumbnailLabelElem.appendChild(thumbnailLiveLabelElem);
-                }
-                
-                if(this.label.includes(label.limited) === true) {
-                    const thumbnaiLimitedLabelElem = document.createElement('li');
-                    thumbnaiLimitedLabelElem.classList.add('thumbnail__label-limited');
-                    const thumbnailLimitedLabelImgElem = document.createElement('img');
-                    thumbnailLimitedLabelImgElem.src = '../img/limited.svg';
-                    thumbnailLimitedLabelImgElem.alt = label.limited;
-                    thumbnaiLimitedLabelElem.appendChild(thumbnailLimitedLabelImgElem);
-                    thumbnailLabelElem.appendChild(thumbnaiLimitedLabelElem);
-                }
-                
-                if(this.label.includes(label.tits) === true) {
-                    const thumbnailTitsLabelElem = document.createElement('li');
-                    thumbnailTitsLabelElem.classList.add('thumbnail__label-tits');
-                    const thumbnailTitsLabelImgElem = document.createElement('img');
-                    thumbnailTitsLabelImgElem.src = '../img/tits.png';
-                    thumbnailTitsLabelImgElem.alt = label.tits;
-                    thumbnailTitsLabelElem.appendChild(thumbnailTitsLabelImgElem);
-                    thumbnailLabelElem.appendChild(thumbnailTitsLabelElem);
-                }
-
-                if(this.label.includes(label.mark) === true) {
-                    const thumbnailMarkLabelElem = document.createElement('li');
-                    thumbnailMarkLabelElem.classList.add('thumbnail__label-mark');
-                    const thumbnailMarkLabelImgElem = document.createElement('img');
-                    thumbnailMarkLabelImgElem.src = '../img/mark.png';
-                    thumbnailMarkLabelImgElem.alt = label.mark;
-                    thumbnailMarkLabelElem.appendChild(thumbnailMarkLabelImgElem);
-                    thumbnailLabelElem.appendChild(thumbnailMarkLabelElem);
-                }
-
-                if(thumbnailLabelElem.children.length === 0) {
-                    thumbnailLabelElem.remove();
-                }
-            }        
+            }
         }
 
 
@@ -515,10 +539,37 @@
             mainThumbnailsShuffle[i].thumbnail();
         }
         
-        for(let i = 0; i <= 1; i++) {
+        // for(let i = 0; i <= 3; i++) {
             
-            pickupThumbnailsShuffle[i].thumbnail();
-        }
+            // pickupThumbnailsShuffle[i].();
+            // console.log(pickupThumbnailsShuffle[i].user);
+            
+        //     const t = pickupThumbnailsShuffle[i].id;
+            
+            
+        // }
+
+        
+       
+
+        const videoThumbnailItemElem = document.querySelectorAll('#pickupThumbnailList li');
+            
+        videoThumbnailItemElem.forEach((item) => {
+
+            item.classList.add('thumbnail__pickupItem');
+        });
+        
+        // for(let i = 0; i <= 3; i++) {
+        
+        //     // pickupThumbnailsShuffle[i]
+        //     console.log(pickupThumbnailsShuffle[i].id);
+            
+        //     // const t = pickupThumbnailsShuffle[i].id;
+        // }
+
+
+        // const t = pickupThumbnailsShuffle[i].id;
+
 
     // ▲
 
