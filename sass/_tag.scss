@@ -52,8 +52,8 @@ $block: tag;
             color: #555;
             border-radius: 5px;
             border: solid 1px $sc01;
-            padding: 10px 7px 9px;
-            padding: calcVw(10) calcVw(7) calcVw(9);
+            padding: 10px 10px 8px;
+            padding: calcVw(10) calcVw(10) calcVw(8);
             margin-right: 7px;
             margin-right: calcVw(7);
         }

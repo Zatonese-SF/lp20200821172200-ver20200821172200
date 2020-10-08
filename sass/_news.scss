@@ -17,8 +17,8 @@ $block: news;
         letter-spacing: $ls2S;
         color: #fff;
         background-color: #555;
-        padding: 10px 15px;
-        padding: calcVw(10) calcVw(15);
+        padding: 10px 15px 9px;
+        padding: calcVw(10) calcVw(15) calcVw(9);
         position: relative;
         z-index: 1;
     }
@@ -59,6 +59,8 @@ $block: news;
             @include fs($fs1S);
             letter-spacing: $ls2S;
             color: #FFA500;
+            margin-top: 3px;
+            margin-top: calcVw(3);
         }
 
 
@@ -68,6 +70,8 @@ $block: news;
             @include fs($fsDFS);
             letter-spacing: $lsDF;
             color: #fff;
+            margin-top: 3px;
+            margin-top: calcVw(3);
         }
     }
 }

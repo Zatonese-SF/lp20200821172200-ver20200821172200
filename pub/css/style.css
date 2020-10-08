@@ -288,8 +288,8 @@ body {
   letter-spacing: 0.06em;
   color: #fff;
   background-color: #555;
-  padding: 10px 15px;
-  padding: 2.66667vw 4vw;
+  padding: 10px 15px 9px;
+  padding: 2.66667vw 4vw 2.4vw;
   position: relative;
   z-index: 1;
 }
@@ -364,6 +364,8 @@ body {
   font-size: 3.2vw;
   letter-spacing: 0.06em;
   color: #FFA500;
+  margin-top: 3px;
+  margin-top: 0.8vw;
 }
 
 .news dl dd {
@@ -372,6 +374,8 @@ body {
   font-size: 3.73333vw;
   letter-spacing: 0.1em;
   color: #fff;
+  margin-top: 3px;
+  margin-top: 0.8vw;
 }
 
 .mainVisual {
@@ -459,8 +463,8 @@ body {
   color: #555;
   border-radius: 5px;
   border: solid 1px #ff3399;
-  padding: 10px 7px 9px;
-  padding: 2.66667vw 1.86667vw 2.4vw;
+  padding: 10px 10px 8px;
+  padding: 2.66667vw 2.66667vw 2.13333vw;
   margin-right: 7px;
   margin-right: 1.86667vw;
 }
@@ -587,22 +591,26 @@ body {
   align-items: center;
   font-size: 1rem;
   font-size: 2.66667vw;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 4px 10px 3px;
-  padding: 1.06667vw 2.66667vw 0.8vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 4px 10px 4px;
+  padding: 1.06667vw 2.66667vw 1.06667vw;
 }
 
 .thumbnail__splash {
-  background: url(../img/splash.png) no-repeat left center/auto 100%;
+  background: url(../img/splash.png) no-repeat left top/auto 100%;
   padding-left: 1.5em;
-  margin-right: 5px;
-  margin-right: 1.33333vw;
+  margin-top: 2px;
+  margin-top: 0.53333vw;
+  margin-right: 7px;
+  margin-right: 1.86667vw;
 }
 
 .thumbnail__like {
-  background: url(../img/heart.png) no-repeat left center/auto 100%;
+  background: url(../img/heart.png) no-repeat left top/auto 100%;
+  margin-top: 2px;
+  margin-top: 0.53333vw;
   padding-left: 1.5em;
 }
 

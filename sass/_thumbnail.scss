@@ -127,26 +127,30 @@ $block: thumbnail;
         display: flex;
         align-items: center;
         @include fs($fs1SS);
-        letter-spacing: $lsDF;
+        letter-spacing: $ls1S;
         border-radius: 15px;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 4px 10px 3px;
-        padding: calcVw(4) calcVw(10) calcVw(3);
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 4px 10px 4px;
+        padding: calcVw(4) calcVw(10) calcVw(4);
     }
 
 
 
     &__splash {
-        background: url(../img/splash.png) no-repeat left center/auto 100%;
+        background: url(../img/splash.png) no-repeat left top/auto 100%;
         padding-left: 1.5em;
-        margin-right: 5px;
-        margin-right: calcVw(5);
+        margin-top: 2px;
+        margin-top: calcVw(2);
+        margin-right: 7px;
+        margin-right: calcVw(7);
     }
 
 
 
     &__like {
-        background: url(../img/heart.png) no-repeat left center/auto 100%;
+        background: url(../img/heart.png) no-repeat left top/auto 100%;
+        margin-top: 2px;
+        margin-top: calcVw(2);
         padding-left: 1.5em;
     }
 

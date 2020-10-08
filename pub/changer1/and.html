@@ -5,6 +5,18 @@
 
         <!-- lp20200821172200-ver20200821172200 -->
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144999641-15"></script>
+        <script>
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-144999641-15');
+
+        </script>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
@@ -63,7 +75,7 @@
 
                 <img class="appInfoSub__icon" src="//pocketmonster-gogo.com/appicon/and/<?php echo($andapp); ?>/img/icon_ad.png" alt="アプリの画像">
 
-                <a class="appInfoSub__dl--and" href="<?php echo($send_url); ?>">ダウンロード</a>
+                <a class="appInfoSub__dl--and" href="<?php echo($send_url); ?>" onclick="gtag('event', 'download', {'event_category': 'link', 'event_label': 'dlbtn', 'value': '1'});">ダウンロード</a>
 
             </div>  
 
@@ -158,7 +170,7 @@
 
                     <p class="appInfoFree">ダウンロード<span>無料</span>&#x203C;</p>
 
-                    <a class="appInfoBtn" href="<?php echo($send_url); ?>" alt="Google Playからダウンロード"><img src="../img/btn-and.png" alt="ダウンロード"></a>
+                    <a class="appInfoBtn" href="<?php echo($send_url); ?>" onclick="gtag('event', 'download', {'event_category': 'link', 'event_label': 'dlbtn', 'value': '1'});"><img src="../img/btn-and.png" alt="Google Playからダウンロード"></a>
 
                 </div>
 
@@ -219,7 +231,7 @@
     
                         <p class="appInfoFree">ダウンロード<span>無料</span>&#x203C;</p>
     
-                        <a class="appInfoBtn" href="<?php echo($send_url); ?>" alt="Google Playからダウンロード"><img src="../img/btn-and.png" alt="ダウンロード"></a>
+                        <a class="appInfoBtn" href="<?php echo($send_url); ?>" onclick="gtag('event', 'download', {'event_category': 'link', 'event_label': 'dlbtn', 'value': '1'});"><img src="../img/btn-and.png" alt="Google Playからダウンロード"></a>
     
                     </div>
 
